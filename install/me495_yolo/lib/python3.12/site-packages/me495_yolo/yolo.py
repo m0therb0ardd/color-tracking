@@ -257,20 +257,25 @@ class YoloNode(Node):
             # Find contours of the detected regions
             contours, _ = cv2.findContours(mask, cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_SIMPLE)
 
-            # Draw bounding boxes and label the detected colors
+            # calculate centroid and label the detected colors
             for contour in contours:
                 if cv2.contourArea(contour) > 500:  # Filter small regions by area
-                    x, y, w, h = cv2.boundingRect(contour)
-                    cv2.rectangle(annotated_image, (x, y), (x + w, y + h), (0, 255, 0), 2)
-                    cv2.putText(
-                        annotated_image,
-                        color_name,
-                        (x, y - 10),
-                        cv2.FONT_HERSHEY_SIMPLEX,
-                        0.5,
-                        (0, 255, 0),
-                        2,
-                    )
+                    # Calculate the centroid
+                    moments = cv2.moments(contour)
+                    if moments["m00"] != 0:  # Avoid division by zero
+                        cX = int(moments["m10"] / moments["m00"])
+                        cY = int(moments["m01"] / moments["m00"])
+                        # Annotate the centroid on the image
+                        cv2.circle(annotated_image, (cX, cY), 5, (0, 255, 0), -1)
+                        cv2.putText(
+                            annotated_image,
+                            f"{color_name} ({cX}, {cY})",
+                            (cX + 10, cY - 10),
+                            cv2.FONT_HERSHEY_SIMPLEX,
+                            0.5,
+                            (0, 255, 0),
+                            2,
+                        )
 
         # Convert the annotated image back to ROS Image message
         new_msg = self.bridge.cv2_to_imgmsg(annotated_image, encoding='bgr8')
