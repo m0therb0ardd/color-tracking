@@ -200,18 +200,116 @@
 
 
 ####################################################################################################################################
+# import rclpy
+# from ultralytics import YOLO
+# from rclpy.node import Node
+# from sensor_msgs.msg import Image
+# from cv_bridge import CvBridge
+# import cv2
+# import numpy as np
+
+
+# class YoloNode(Node):
+#     """
+#     Identify and track specific colors (pink, orange, white, green, blue, yellow).
+
+#     Subscribes
+#     ----------
+#     image (sensor_msgs/msg/Image) - The input image
+
+#     Publishes
+#     ---------
+#     new_image (sensor_msgs/msg/Image) - The image with bounding boxes around detected colors
+#     """
+
+#     def __init__(self):
+#         super().__init__("pose")
+#         self.bridge = CvBridge()
+#         self.create_subscription(Image, 'image', self.yolo_callback, 10)
+#         self.pub = self.create_publisher(Image, 'new_image', 10)
+
+#         #store path 
+#         self.path = []
+
+#         #define the c
+
+#     def yolo_callback(self, image):
+#         """Identify and track specific colors in the scene."""
+#         # Convert ROS Image to OpenCV image
+#         cv_image = self.bridge.imgmsg_to_cv2(image, desired_encoding='bgr8')
+
+#         # Convert to HSV for color segmentation
+#         hsv_image = cv2.cvtColor(cv_image, cv2.COLOR_BGR2HSV)
+
+#         # Define HSV ranges for colors
+#         color_ranges = {
+#             "pink": ((145, 50, 50), (165, 255, 255)),
+#             "orange": ((5, 50, 50), (15, 255, 255)),
+#             "white": ((0, 0, 200), (180, 30, 255)),
+#             "green": ((35, 50, 50), (85, 255, 255)),
+#             "blue": ((90, 50, 50), (130, 255, 255)),
+#             "yellow": ((25, 50, 50), (35, 255, 255)),
+#         }
+
+#         # Create a copy of the image for drawing annotations
+#         annotated_image = cv_image.copy()
+
+#         # Loop through each color and detect regions
+#         for color_name, (lower, upper) in color_ranges.items():
+#             # Create a mask for the current color
+#             mask = cv2.inRange(hsv_image, np.array(lower), np.array(upper))
+
+#             # Find contours of the detected regions
+#             contours, _ = cv2.findContours(mask, cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_SIMPLE)
+
+#             # calculate centroid and label the detected colors
+#             for contour in contours:
+#                 if cv2.contourArea(contour) > 500:  # Filter small regions by area
+#                     # Calculate the centroid
+#                     moments = cv2.moments(contour)
+#                     if moments["m00"] != 0:  # Avoid division by zero
+#                         cX = int(moments["m10"] / moments["m00"])
+#                         cY = int(moments["m01"] / moments["m00"])
+#                         # Annotate the centroid on the image
+#                         cv2.circle(annotated_image, (cX, cY), 5, (0, 255, 0), -1)
+#                         cv2.putText(
+#                             annotated_image,
+#                             f"{color_name} ({cX}, {cY})",
+#                             (cX + 10, cY - 10),
+#                             cv2.FONT_HERSHEY_SIMPLEX,
+#                             0.5,
+#                             (0, 255, 0),
+#                             2,
+#                         )
+
+#         # Convert the annotated image back to ROS Image message
+#         new_msg = self.bridge.cv2_to_imgmsg(annotated_image, encoding='bgr8')
+
+#         # Publish the annotated image
+#         self.pub.publish(new_msg)
+
+
+# def main():
+#     rclpy.init()
+#     node = YoloNode()
+#     rclpy.spin(node)
+#     rclpy.shutdown()
+
+############################################################################
 import rclpy
-from ultralytics import YOLO
 from rclpy.node import Node
 from sensor_msgs.msg import Image
 from cv_bridge import CvBridge
 import cv2
 import numpy as np
+from scipy.interpolate import splprep, splev
+
 
 
 class YoloNode(Node):
     """
-    Identify and track specific colors (pink, orange, white, green, blue, yellow).
+    Identify and track a specific color (e.g., yellow),
+    and create a path based on the movement of the detected color.
 
     Subscribes
     ----------
@@ -219,69 +317,161 @@ class YoloNode(Node):
 
     Publishes
     ---------
-    new_image (sensor_msgs/msg/Image) - The image with bounding boxes around detected colors
+    new_image (sensor_msgs/msg/Image) - Annotated image with the path
     """
 
     def __init__(self):
-        super().__init__("pose")
+        super().__init__("color_tracker")
         self.bridge = CvBridge()
         self.create_subscription(Image, 'image', self.yolo_callback, 10)
         self.pub = self.create_publisher(Image, 'new_image', 10)
 
+        # Store the path as a list of centroids
+        self.path = []
+
+        # Define the color to track (yellow)
+        self.color_name = "yellow"
+        self.color_range = ((25, 50, 50), (35, 255, 255))  # HSV range for yellow
+
+        # self.color_name = "pink"
+        # self.color_range = ((145, 50, 50), (165, 255, 255))  # HSV range for pink
+
+        # self.color_name = "orange"
+        # self.color_range =  ((5, 50, 50), (15, 255, 255))
+
+        # self.color_name = "white"
+        # self.color_range =  ((0, 0, 200), (180, 30, 255))
+
+        # self.color_name = "green"
+        # self.color_range =  ((0, 0, 200), (180, 30, 255))
+
+        # self.color_name = "blue"
+        # self.color_range =  ((90, 50, 50), (130, 255, 255))
+
+    def smooth_new_point(self, path, window_size=10):
+        """Smooth the latest point using only its nearest neighbors."""
+        if len(path) < 2:  # No need to smooth with less than 2 points
+            return path
+
+        # Define the sliding window for smoothing the current point
+        start = max(0, len(path) - window_size)
+        neighbors = path[start:]
+
+        # Compute the average position of the neighbors
+        x_avg = sum(p[0] for p in neighbors) // len(neighbors)
+        y_avg = sum(p[1] for p in neighbors) // len(neighbors)
+
+        # Replace the latest point with its smoothed position
+        path[-1] = (x_avg, y_avg)
+
+        return path
+    
+    def smooth_path_ema(self, path, alpha=0.2):
+        """Smooth the path using an exponential moving average."""
+        if len(path) < 2:  # No need to smooth with less than 2 points
+            return path
+
+        smoothed_path = [path[0]]
+        for i in range(1, len(path)):
+            prev_x, prev_y = smoothed_path[-1]
+            curr_x, curr_y = path[i]
+            smoothed_path.append((
+                int(alpha * curr_x + (1 - alpha) * prev_x),
+                int(alpha * curr_y + (1 - alpha) * prev_y),
+            ))
+        return smoothed_path
+    
+
+    def smooth_path_spline(self, path, s=2):
+        """Smooth the path using cubic spline interpolation."""
+        if len(path) < 4:  # Spline requires at least 4 points
+            return path
+
+        x = [p[0] for p in path]
+        y = [p[1] for p in path]
+
+        # Fit a spline to the points
+        tck, _ = splprep([x, y], s=s)
+        x_smooth, y_smooth = splev(np.linspace(0, 1, len(path)), tck)
+
+        smoothed_path = [(int(xi), int(yi)) for xi, yi in zip(x_smooth, y_smooth)]
+        return smoothed_path
+
+
+
     def yolo_callback(self, image):
-        """Identify and track specific colors in the scene."""
+        """Track the specified color and create a smoothed path."""
         # Convert ROS Image to OpenCV image
         cv_image = self.bridge.imgmsg_to_cv2(image, desired_encoding='bgr8')
 
         # Convert to HSV for color segmentation
         hsv_image = cv2.cvtColor(cv_image, cv2.COLOR_BGR2HSV)
 
-        # Define HSV ranges for colors
-        color_ranges = {
-            "pink": ((145, 50, 50), (165, 255, 255)),
-            "orange": ((5, 50, 50), (15, 255, 255)),
-            "white": ((0, 0, 200), (180, 30, 255)),
-            "green": ((35, 50, 50), (85, 255, 255)),
-            "blue": ((90, 50, 50), (130, 255, 255)),
-            "yellow": ((25, 50, 50), (35, 255, 255)),
-        }
+        # Create a mask for the specified color
+        mask = cv2.inRange(hsv_image, np.array(self.color_range[0]), np.array(self.color_range[1]))
 
-        # Create a copy of the image for drawing annotations
+        # Find contours of the detected regions
+        contours, _ = cv2.findContours(mask, cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_SIMPLE)
+
+        # Annotate the image and update the path
         annotated_image = cv_image.copy()
+        merged_contour = None
 
-        # Loop through each color and detect regions
-        for color_name, (lower, upper) in color_ranges.items():
-            # Create a mask for the current color
-            mask = cv2.inRange(hsv_image, np.array(lower), np.array(upper))
+        # Merge nearby contours
+        for contour in contours:
+            if cv2.contourArea(contour) > 500:  # Filter small regions by area
+                if merged_contour is None:
+                    merged_contour = contour
+                else:
+                    merged_contour = np.vstack((merged_contour, contour))
 
-            # Find contours of the detected regions
-            contours, _ = cv2.findContours(mask, cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_SIMPLE)
+        # If a merged contour exists, calculate its centroid
+        if merged_contour is not None:
+            moments = cv2.moments(merged_contour)
+            if moments["m00"] != 0:  # Avoid division by zero
+                cX = int(moments["m10"] / moments["m00"])
+                cY = int(moments["m01"] / moments["m00"])
 
-            # calculate centroid and label the detected colors
-            for contour in contours:
-                if cv2.contourArea(contour) > 500:  # Filter small regions by area
-                    # Calculate the centroid
-                    moments = cv2.moments(contour)
-                    if moments["m00"] != 0:  # Avoid division by zero
-                        cX = int(moments["m10"] / moments["m00"])
-                        cY = int(moments["m01"] / moments["m00"])
-                        # Annotate the centroid on the image
-                        cv2.circle(annotated_image, (cX, cY), 5, (0, 255, 0), -1)
-                        cv2.putText(
-                            annotated_image,
-                            f"{color_name} ({cX}, {cY})",
-                            (cX + 10, cY - 10),
-                            cv2.FONT_HERSHEY_SIMPLEX,
-                            0.5,
-                            (0, 255, 0),
-                            2,
-                        )
+                # Add the centroid to the path
+                self.path.append((cX, cY))
+
+                # Draw the current centroid
+                cv2.circle(annotated_image, (cX, cY), 5, (0, 255, 0), -1)
+                cv2.putText(
+                    annotated_image,
+                    f"{self.color_name} ({cX}, {cY})",
+                    (cX + 10, cY - 10),
+                    cv2.FONT_HERSHEY_SIMPLEX,
+                    0.5,
+                    (0, 255, 0),
+                    2,
+                )
+
+        # Smooth the path
+        #self.path = self.smooth_path_local(self.path, window_size=5)
+
+        # Smooth the path NOT HAPPY WITH 
+        #self.path = self.smooth_new_point(self.path, window_size=10)
+
+        #ema path NOT HAPPY WITH 
+        #self.path = self.smooth_path_ema(self.path, alpha=0.2)
+
+        #cubic spline NOT HAPPY WITH
+        #self.path = self.smooth_path_spline(self.path, s=2)
+
+        # Draw the smoothed path
+        if len(self.path) > 1:
+            for i in range(1, len(self.path)):
+                cv2.line(annotated_image, self.path[i - 1], self.path[i], (0, 255, 0), 2)
 
         # Convert the annotated image back to ROS Image message
         new_msg = self.bridge.cv2_to_imgmsg(annotated_image, encoding='bgr8')
 
         # Publish the annotated image
         self.pub.publish(new_msg)
+
+
+
 
 
 def main():
