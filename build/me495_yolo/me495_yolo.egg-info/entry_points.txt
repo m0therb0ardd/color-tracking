@@ -1,0 +1,2 @@
+[console_scripts]
+yolo = me495_yolo.yolo:main
