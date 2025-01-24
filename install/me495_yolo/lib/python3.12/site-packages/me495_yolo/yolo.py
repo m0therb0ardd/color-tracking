@@ -302,7 +302,10 @@ from sensor_msgs.msg import Image
 from cv_bridge import CvBridge
 import cv2
 import numpy as np
+import time
 from scipy.interpolate import splprep, splev
+from std_msgs.msg import Float32MultiArray
+from nav_msgs.msg import Path
 
 
 
@@ -324,10 +327,14 @@ class YoloNode(Node):
         super().__init__("color_tracker")
         self.bridge = CvBridge()
         self.create_subscription(Image, 'image', self.yolo_callback, 10)
+        self.create_subscription(Path, 'waypoints', self.waypoint_callback, 10)
         self.pub = self.create_publisher(Image, 'new_image', 10)
+        self.path_publisher = self.create_publisher(Float32MultiArray, 'path_points', 10)
+
 
         # Store the path as a list of centroids
         self.path = []
+        self.waypoints = []
 
         # Define the color to track (yellow)
         self.color_name = "yellow"
@@ -348,6 +355,15 @@ class YoloNode(Node):
         # self.color_name = "blue"
         # self.color_range =  ((90, 50, 50), (130, 255, 255))
 
+        # Timer for path recording
+        self.start_time = None
+        #self.time_limit = 15 # end path recordign after 15 seconds 
+
+    def waypoint_callback(self, msg):
+        """Callback to receive waypoints from the waypoint generation node."""
+        self.waypoints = [(int(pose.pose.position.x), int(pose.pose.position.y)) for pose in msg.poses]
+
+    
     def smooth_new_point(self, path, window_size=10):
         """Smooth the latest point using only its nearest neighbors."""
         if len(path) < 2:  # No need to smooth with less than 2 points
@@ -401,6 +417,18 @@ class YoloNode(Node):
 
     def yolo_callback(self, image):
         """Track the specified color and create a smoothed path."""
+
+        # Begin timer clock 
+        current_time = time.time()
+        if self.start_time is None:
+            self.start_time = current_time
+
+        # elapsed_time = current_time - self.start_time
+        # if elapsed_time > self.time_limit:
+        #     # Stop updating the path after the time limit
+        #     self.get_logger().info("Path recording time limit reached.")
+        #     return
+
         # Convert ROS Image to OpenCV image
         cv_image = self.bridge.imgmsg_to_cv2(image, desired_encoding='bgr8')
 
@@ -433,7 +461,10 @@ class YoloNode(Node):
                 cY = int(moments["m01"] / moments["m00"])
 
                 # Add the centroid to the path
-                self.path.append((cX, cY))
+                # self.path.append((cX, cY))
+                # Add the centroid to the path ONLY if it moves significantly
+                if len(self.path) == 0 or (abs(cX - self.path[-1][0]) > 5 or abs(cY - self.path[-1][1]) > 5):
+                    self.path.append((cX, cY))
 
                 # Draw the current centroid
                 cv2.circle(annotated_image, (cX, cY), 5, (0, 255, 0), -1)
@@ -464,9 +495,18 @@ class YoloNode(Node):
             for i in range(1, len(self.path)):
                 cv2.line(annotated_image, self.path[i - 1], self.path[i], (0, 255, 0), 2)
 
+        # Publish the raw path
+        path_msg = Float32MultiArray()
+        path_msg.data = [coord for point in self.path for coord in point]
+        self.path_publisher.publish(path_msg)
+
+        # Draw waypoints as red dots
+        for x, y in self.waypoints:
+            cv2.circle(annotated_image, (x, y), 5, (0, 0, 255), -1)  # Red dot for waypoints
+
+
         # Convert the annotated image back to ROS Image message
         new_msg = self.bridge.cv2_to_imgmsg(annotated_image, encoding='bgr8')
-
         # Publish the annotated image
         self.pub.publish(new_msg)
 

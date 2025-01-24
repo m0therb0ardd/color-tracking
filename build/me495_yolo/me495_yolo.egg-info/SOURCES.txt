@@ -9,6 +9,7 @@ setup.py
 ../../build/me495_yolo/me495_yolo.egg-info/top_level.txt
 ../../build/me495_yolo/me495_yolo.egg-info/zip-safe
 me495_yolo/__init__.py
+me495_yolo/waypoint.py
 me495_yolo/yolo.py
 resource/me495_yolo
 test/test_copyright.py

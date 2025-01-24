@@ -1,7 +1,9 @@
 /home/catherine-maglione/yolo_home/install/me495_yolo/lib/python3.12/site-packages/me495_yolo/yolo.py
 /home/catherine-maglione/yolo_home/install/me495_yolo/lib/python3.12/site-packages/me495_yolo/__init__.py
+/home/catherine-maglione/yolo_home/install/me495_yolo/lib/python3.12/site-packages/me495_yolo/waypoint.py
 /home/catherine-maglione/yolo_home/install/me495_yolo/lib/python3.12/site-packages/me495_yolo/__pycache__/yolo.cpython-312.pyc
 /home/catherine-maglione/yolo_home/install/me495_yolo/lib/python3.12/site-packages/me495_yolo/__pycache__/__init__.cpython-312.pyc
+/home/catherine-maglione/yolo_home/install/me495_yolo/lib/python3.12/site-packages/me495_yolo/__pycache__/waypoint.cpython-312.pyc
 /home/catherine-maglione/yolo_home/install/me495_yolo/share/ament_index/resource_index/packages/me495_yolo
 /home/catherine-maglione/yolo_home/install/me495_yolo/share/me495_yolo/package.xml
 /home/catherine-maglione/yolo_home/install/me495_yolo/lib/python3.12/site-packages/me495_yolo-0.0.0-py3.12.egg-info/SOURCES.txt
@@ -11,4 +13,5 @@
 /home/catherine-maglione/yolo_home/install/me495_yolo/lib/python3.12/site-packages/me495_yolo-0.0.0-py3.12.egg-info/requires.txt
 /home/catherine-maglione/yolo_home/install/me495_yolo/lib/python3.12/site-packages/me495_yolo-0.0.0-py3.12.egg-info/top_level.txt
 /home/catherine-maglione/yolo_home/install/me495_yolo/lib/python3.12/site-packages/me495_yolo-0.0.0-py3.12.egg-info/entry_points.txt
+/home/catherine-maglione/yolo_home/install/me495_yolo/lib/me495_yolo/waypoint
 /home/catherine-maglione/yolo_home/install/me495_yolo/lib/me495_yolo/yolo

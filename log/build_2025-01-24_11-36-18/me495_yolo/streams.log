@@ -1,0 +1,25 @@
+[0.440s] Invoking command in '/home/catherine-maglione/yolo_home/src/me495_yolo': PYTHONPATH=/home/catherine-maglione/yolo_home/build/me495_yolo/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/catherine-maglione/yolo_home/install/me495_yolo/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../../build/me495_yolo build --build-base /home/catherine-maglione/yolo_home/build/me495_yolo/build install --record /home/catherine-maglione/yolo_home/build/me495_yolo/install.log --single-version-externally-managed install_data
+[0.593s] running egg_info
+[0.605s] writing ../../build/me495_yolo/me495_yolo.egg-info/PKG-INFO
+[0.605s] writing dependency_links to ../../build/me495_yolo/me495_yolo.egg-info/dependency_links.txt
+[0.605s] writing entry points to ../../build/me495_yolo/me495_yolo.egg-info/entry_points.txt
+[0.605s] writing requirements to ../../build/me495_yolo/me495_yolo.egg-info/requires.txt
+[0.605s] writing top-level names to ../../build/me495_yolo/me495_yolo.egg-info/top_level.txt
+[0.629s] reading manifest file '../../build/me495_yolo/me495_yolo.egg-info/SOURCES.txt'
+[0.629s] writing manifest file '../../build/me495_yolo/me495_yolo.egg-info/SOURCES.txt'
+[0.629s] running build
+[0.629s] running build_py
+[0.629s] copying me495_yolo/waypoint.py -> /home/catherine-maglione/yolo_home/build/me495_yolo/build/lib/me495_yolo
+[0.630s] running install
+[0.633s] running install_lib
+[0.645s] copying /home/catherine-maglione/yolo_home/build/me495_yolo/build/lib/me495_yolo/waypoint.py -> /home/catherine-maglione/yolo_home/install/me495_yolo/lib/python3.12/site-packages/me495_yolo
+[0.645s] byte-compiling /home/catherine-maglione/yolo_home/install/me495_yolo/lib/python3.12/site-packages/me495_yolo/waypoint.py to waypoint.cpython-312.pyc
+[0.646s] running install_data
+[0.646s] running install_egg_info
+[0.659s] removing '/home/catherine-maglione/yolo_home/install/me495_yolo/lib/python3.12/site-packages/me495_yolo-0.0.0-py3.12.egg-info' (and everything under it)
+[0.659s] Copying ../../build/me495_yolo/me495_yolo.egg-info to /home/catherine-maglione/yolo_home/install/me495_yolo/lib/python3.12/site-packages/me495_yolo-0.0.0-py3.12.egg-info
+[0.659s] running install_scripts
+[0.734s] Installing waypoint script to /home/catherine-maglione/yolo_home/install/me495_yolo/lib/me495_yolo
+[0.735s] Installing yolo script to /home/catherine-maglione/yolo_home/install/me495_yolo/lib/me495_yolo
+[0.735s] writing list of installed files to '/home/catherine-maglione/yolo_home/build/me495_yolo/install.log'
+[0.748s] Invoked command in '/home/catherine-maglione/yolo_home/src/me495_yolo' returned '0': PYTHONPATH=/home/catherine-maglione/yolo_home/build/me495_yolo/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/catherine-maglione/yolo_home/install/me495_yolo/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../../build/me495_yolo build --build-base /home/catherine-maglione/yolo_home/build/me495_yolo/build install --record /home/catherine-maglione/yolo_home/build/me495_yolo/install.log --single-version-externally-managed install_data

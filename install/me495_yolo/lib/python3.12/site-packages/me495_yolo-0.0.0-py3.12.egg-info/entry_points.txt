@@ -1,2 +1,3 @@
 [console_scripts]
+waypoint = me495_yolo.waypoint:main
 yolo = me495_yolo.yolo:main
