@@ -1,0 +1,8 @@
+source;share/numsr_turtlebot/hook/cmake_prefix_path.ps1
+source;share/numsr_turtlebot/hook/cmake_prefix_path.dsv
+source;share/numsr_turtlebot/hook/cmake_prefix_path.sh
+source;share/numsr_turtlebot/local_setup.bash
+source;share/numsr_turtlebot/local_setup.dsv
+source;share/numsr_turtlebot/local_setup.ps1
+source;share/numsr_turtlebot/local_setup.sh
+source;share/numsr_turtlebot/local_setup.zsh

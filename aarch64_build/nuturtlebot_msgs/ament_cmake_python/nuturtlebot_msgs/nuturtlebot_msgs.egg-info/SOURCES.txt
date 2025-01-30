@@ -1,0 +1,6 @@
+setup.py
+nuturtlebot_msgs/__init__.py
+nuturtlebot_msgs.egg-info/PKG-INFO
+nuturtlebot_msgs.egg-info/SOURCES.txt
+nuturtlebot_msgs.egg-info/dependency_links.txt
+nuturtlebot_msgs.egg-info/top_level.txt

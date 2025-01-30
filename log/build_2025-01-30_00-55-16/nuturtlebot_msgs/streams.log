@@ -1,0 +1,249 @@
+[0.021s] Invoking command in '/ros_ws/aarch64_build/nuturtlebot_msgs': CMAKE_PREFIX_PATH=/opt/ros/iron /usr/bin/cmake /ros_ws/src/nuturtlebot_msgs -DCMAKE_TOOLCHAIN_FILE=/toolchain.cmake -DCMAKE_INSTALL_PREFIX=aarch64_install -DCMAKE_INSTALL_PREFIX=/ros_ws/aarch64_install/nuturtlebot_msgs
+[0.028s] -- Found ament_cmake: 2.0.3 (/opt/ros/iron/share/ament_cmake/cmake)
+[0.161s] -- Found builtin_interfaces: 1.6.0 (/opt/ros/iron/share/builtin_interfaces/cmake)
+[0.172s] -- Found rosidl_generator_c: 4.0.1 (/opt/ros/iron/share/rosidl_generator_c/cmake)
+[0.176s] -- Found rosidl_generator_cpp: 4.0.1 (/opt/ros/iron/share/rosidl_generator_cpp/cmake)
+[0.182s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.189s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[0.196s] -- Found rosidl_default_generators: 1.5.0 (/opt/ros/iron/share/rosidl_default_generators/cmake)
+[0.200s] -- Found rosidl_adapter: 4.0.1 (/opt/ros/iron/share/rosidl_adapter/cmake)
+[0.422s] -- Found ament_cmake_ros: 0.11.2 (/opt/ros/iron/share/ament_cmake_ros/cmake)
+[0.664s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.736s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[0.755s] -- Found python_cmake_module: 0.10.2 (/opt/ros/iron/share/python_cmake_module/cmake)
+[0.769s] -- Using PYTHON_EXECUTABLE: /usr/bin/python3
+[0.769s] -- Using PYTHON_INCLUDE_DIRS: /usr/include/python3.10
+[0.769s] -- Using PYTHON_LIBRARIES: /usr/lib/aarch64-linux-gnu/libpython3.10.so
+[0.780s] -- Configuring done
+[0.794s] -- Generating done
+[0.795s] -- Build files have been written to: /ros_ws/aarch64_build/nuturtlebot_msgs
+[0.798s] Invoked command in '/ros_ws/aarch64_build/nuturtlebot_msgs' returned '0': CMAKE_PREFIX_PATH=/opt/ros/iron /usr/bin/cmake /ros_ws/src/nuturtlebot_msgs -DCMAKE_TOOLCHAIN_FILE=/toolchain.cmake -DCMAKE_INSTALL_PREFIX=aarch64_install -DCMAKE_INSTALL_PREFIX=/ros_ws/aarch64_install/nuturtlebot_msgs
+[0.799s] Invoking command in '/ros_ws/aarch64_build/nuturtlebot_msgs': CMAKE_PREFIX_PATH=/opt/ros/iron /usr/bin/cmake --build /ros_ws/aarch64_build/nuturtlebot_msgs -- -j32 -l32
+[0.833s] [  2%] [34m[1mGenerating type hashes for ROS interfaces[0m
+[0.840s] [  2%] Built target ament_cmake_python_copy_nuturtlebot_msgs
+[1.014s] [  2%] Built target nuturtlebot_msgs__rosidl_generator_type_description
+[1.017s] running egg_info
+[1.018s] creating nuturtlebot_msgs.egg-info
+[1.018s] writing nuturtlebot_msgs.egg-info/PKG-INFO
+[1.018s] writing dependency_links to nuturtlebot_msgs.egg-info/dependency_links.txt
+[1.018s] writing top-level names to nuturtlebot_msgs.egg-info/top_level.txt
+[1.018s] writing manifest file 'nuturtlebot_msgs.egg-info/SOURCES.txt'
+[1.019s] reading manifest file 'nuturtlebot_msgs.egg-info/SOURCES.txt'
+[1.019s] writing manifest file 'nuturtlebot_msgs.egg-info/SOURCES.txt'
+[1.022s] [  4%] [34m[1mGenerating C code for ROS interfaces[0m
+[1.029s] [  6%] [34m[1mGenerating C++ code for ROS interfaces[0m
+[1.033s] [  6%] Built target ament_cmake_python_build_nuturtlebot_msgs_egg
+[1.246s] [  6%] Built target nuturtlebot_msgs__cpp
+[1.265s] [  9%] [32mBuilding C object CMakeFiles/nuturtlebot_msgs__rosidl_generator_c.dir/rosidl_generator_c/nuturtlebot_msgs/msg/detail/wheel_commands__description.c.o[0m
+[1.265s] [ 11%] [32mBuilding C object CMakeFiles/nuturtlebot_msgs__rosidl_generator_c.dir/rosidl_generator_c/nuturtlebot_msgs/msg/detail/sensor_data__description.c.o[0m
+[1.265s] [ 13%] [32mBuilding C object CMakeFiles/nuturtlebot_msgs__rosidl_generator_c.dir/rosidl_generator_c/nuturtlebot_msgs/msg/detail/sensor_data__functions.c.o[0m
+[1.266s] [ 15%] [32mBuilding C object CMakeFiles/nuturtlebot_msgs__rosidl_generator_c.dir/rosidl_generator_c/nuturtlebot_msgs/msg/detail/sensor_data__type_support.c.o[0m
+[1.266s] [ 18%] [32mBuilding C object CMakeFiles/nuturtlebot_msgs__rosidl_generator_c.dir/rosidl_generator_c/nuturtlebot_msgs/msg/detail/wheel_commands__type_support.c.o[0m
+[1.266s] [ 20%] [32mBuilding C object CMakeFiles/nuturtlebot_msgs__rosidl_generator_c.dir/rosidl_generator_c/nuturtlebot_msgs/msg/detail/wheel_commands__functions.c.o[0m
+[1.302s] [ 22%] [32m[1mLinking C shared library libnuturtlebot_msgs__rosidl_generator_c.so[0m
+[1.333s] [ 22%] Built target nuturtlebot_msgs__rosidl_generator_c
+[1.345s] [ 25%] [34m[1mGenerating C type support dispatch for ROS interfaces[0m
+[1.345s] [ 29%] [34m[1mGenerating C type support for eProsima Fast-RTPS[0m
+[1.345s] [ 27%] [34m[1mGenerating C++ type support dispatch for ROS interfaces[0m
+[1.345s] [ 31%] [34m[1mGenerating C++ type support for eProsima Fast-RTPS[0m
+[1.346s] [ 34%] [34m[1mGenerating C++ introspection for ROS interfaces[0m
+[1.347s] [ 36%] [34m[1mGenerating C introspection for ROS interfaces[0m
+[1.569s] [ 38%] [32mBuilding CXX object CMakeFiles/nuturtlebot_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/nuturtlebot_msgs/msg/sensor_data__type_support.cpp.o[0m
+[1.569s] [ 43%] [32mBuilding CXX object CMakeFiles/nuturtlebot_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/nuturtlebot_msgs/msg/wheel_commands__type_support.cpp.o[0m
+[1.569s] [ 43%] [32mBuilding CXX object CMakeFiles/nuturtlebot_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/nuturtlebot_msgs/msg/sensor_data__type_support.cpp.o[0m
+[1.571s] [ 45%] [32mBuilding CXX object CMakeFiles/nuturtlebot_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/nuturtlebot_msgs/msg/wheel_commands__type_support.cpp.o[0m
+[1.576s] [ 47%] [32mBuilding CXX object CMakeFiles/nuturtlebot_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/nuturtlebot_msgs/msg/detail/sensor_data__type_support.cpp.o[0m
+[1.576s] [ 50%] [32mBuilding CXX object CMakeFiles/nuturtlebot_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/nuturtlebot_msgs/msg/detail/wheel_commands__type_support.cpp.o[0m
+[1.579s] [ 52%] [32mBuilding C object CMakeFiles/nuturtlebot_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/nuturtlebot_msgs/msg/detail/sensor_data__type_support.c.o[0m
+[1.580s] [ 54%] [32mBuilding C object CMakeFiles/nuturtlebot_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/nuturtlebot_msgs/msg/detail/wheel_commands__type_support.c.o[0m
+[1.586s] [ 56%] [32mBuilding CXX object CMakeFiles/nuturtlebot_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/nuturtlebot_msgs/msg/detail/sensor_data__type_support_c.cpp.o[0m
+[1.586s] [ 59%] [32mBuilding CXX object CMakeFiles/nuturtlebot_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/nuturtlebot_msgs/msg/detail/dds_fastrtps/sensor_data__type_support.cpp.o[0m
+[1.586s] [ 61%] [32mBuilding CXX object CMakeFiles/nuturtlebot_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/nuturtlebot_msgs/msg/detail/wheel_commands__type_support_c.cpp.o[0m
+[1.587s] [ 63%] [32mBuilding CXX object CMakeFiles/nuturtlebot_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/nuturtlebot_msgs/msg/detail/dds_fastrtps/wheel_commands__type_support.cpp.o[0m
+[1.605s] [ 65%] [32m[1mLinking CXX shared library libnuturtlebot_msgs__rosidl_typesupport_c.so[0m
+[1.607s] [ 68%] [32m[1mLinking C shared library libnuturtlebot_msgs__rosidl_typesupport_introspection_c.so[0m
+[1.632s] [ 68%] Built target nuturtlebot_msgs__rosidl_typesupport_introspection_c
+[1.632s] [ 68%] Built target nuturtlebot_msgs__rosidl_typesupport_c
+[1.794s] [ 70%] [32m[1mLinking CXX shared library libnuturtlebot_msgs__rosidl_typesupport_cpp.so[0m
+[1.801s] [ 72%] [32m[1mLinking CXX shared library libnuturtlebot_msgs__rosidl_typesupport_fastrtps_c.so[0m
+[1.822s] [ 72%] Built target nuturtlebot_msgs__rosidl_typesupport_cpp
+[1.827s] [ 75%] [32m[1mLinking CXX shared library libnuturtlebot_msgs__rosidl_typesupport_introspection_cpp.so[0m
+[1.845s] [ 75%] Built target nuturtlebot_msgs__rosidl_typesupport_fastrtps_c
+[1.864s] [ 75%] Built target nuturtlebot_msgs__rosidl_typesupport_introspection_cpp
+[1.878s] [ 77%] [32m[1mLinking CXX shared library libnuturtlebot_msgs__rosidl_typesupport_fastrtps_cpp.so[0m
+[1.924s] [ 77%] Built target nuturtlebot_msgs__rosidl_typesupport_fastrtps_cpp
+[1.946s] [ 77%] Built target nuturtlebot_msgs
+[1.974s] [ 79%] [34m[1mGenerating Python code for ROS interfaces[0m
+[2.280s] [ 79%] Built target nuturtlebot_msgs__py
+[2.296s] [ 81%] [32mBuilding C object CMakeFiles/nuturtlebot_msgs__rosidl_generator_py.dir/rosidl_generator_py/nuturtlebot_msgs/msg/_wheel_commands_s.c.o[0m
+[2.298s] [ 84%] [32mBuilding C object CMakeFiles/nuturtlebot_msgs__rosidl_generator_py.dir/rosidl_generator_py/nuturtlebot_msgs/msg/_sensor_data_s.c.o[0m
+[2.366s] [ 86%] [32m[1mLinking C shared library rosidl_generator_py/nuturtlebot_msgs/libnuturtlebot_msgs__rosidl_generator_py.so[0m
+[2.404s] [ 86%] Built target nuturtlebot_msgs__rosidl_generator_py
+[2.434s] [ 88%] [32mBuilding C object CMakeFiles/nuturtlebot_msgs__rosidl_typesupport_fastrtps_c__pyext.dir/rosidl_generator_py/nuturtlebot_msgs/_nuturtlebot_msgs_s.ep.rosidl_typesupport_fastrtps_c.c.o[0m
+[2.434s] [ 90%] [32mBuilding C object CMakeFiles/nuturtlebot_msgs__rosidl_typesupport_introspection_c__pyext.dir/rosidl_generator_py/nuturtlebot_msgs/_nuturtlebot_msgs_s.ep.rosidl_typesupport_introspection_c.c.o[0m
+[2.435s] [ 93%] [32mBuilding C object CMakeFiles/nuturtlebot_msgs__rosidl_typesupport_c__pyext.dir/rosidl_generator_py/nuturtlebot_msgs/_nuturtlebot_msgs_s.ep.rosidl_typesupport_c.c.o[0m
+[2.506s] [ 95%] [32m[1mLinking C shared library rosidl_generator_py/nuturtlebot_msgs/nuturtlebot_msgs_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so[0m
+[2.506s] [100%] [32m[1mLinking C shared library rosidl_generator_py/nuturtlebot_msgs/nuturtlebot_msgs_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so[0m
+[2.506s] [100%] [32m[1mLinking C shared library rosidl_generator_py/nuturtlebot_msgs/nuturtlebot_msgs_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so[0m
+[2.531s] [100%] Built target nuturtlebot_msgs__rosidl_typesupport_c__pyext
+[2.532s] [100%] Built target nuturtlebot_msgs__rosidl_typesupport_fastrtps_c__pyext
+[2.532s] [100%] Built target nuturtlebot_msgs__rosidl_typesupport_introspection_c__pyext
+[2.545s] Invoked command in '/ros_ws/aarch64_build/nuturtlebot_msgs' returned '0': CMAKE_PREFIX_PATH=/opt/ros/iron /usr/bin/cmake --build /ros_ws/aarch64_build/nuturtlebot_msgs -- -j32 -l32
+[2.699s] Invoking command in '/ros_ws/aarch64_build/nuturtlebot_msgs': CMAKE_PREFIX_PATH=/opt/ros/iron /usr/bin/cmake --install /ros_ws/aarch64_build/nuturtlebot_msgs
+[2.709s] -- Install configuration: ""
+[2.709s] -- Installing: /ros_ws/aarch64_install/nuturtlebot_msgs/share/ament_index/resource_index/rosidl_interfaces/nuturtlebot_msgs
+[2.709s] -- Installing: /ros_ws/aarch64_install/nuturtlebot_msgs/share/nuturtlebot_msgs/msg/SensorData.json
+[2.709s] -- Installing: /ros_ws/aarch64_install/nuturtlebot_msgs/share/nuturtlebot_msgs/msg/WheelCommands.json
+[2.709s] -- Installing: /ros_ws/aarch64_install/nuturtlebot_msgs/include/nuturtlebot_msgs/nuturtlebot_msgs
+[2.709s] -- Installing: /ros_ws/aarch64_install/nuturtlebot_msgs/include/nuturtlebot_msgs/nuturtlebot_msgs/msg
+[2.709s] -- Installing: /ros_ws/aarch64_install/nuturtlebot_msgs/include/nuturtlebot_msgs/nuturtlebot_msgs/msg/rosidl_generator_c__visibility_control.h
+[2.709s] -- Installing: /ros_ws/aarch64_install/nuturtlebot_msgs/include/nuturtlebot_msgs/nuturtlebot_msgs/msg/detail
+[2.709s] -- Installing: /ros_ws/aarch64_install/nuturtlebot_msgs/include/nuturtlebot_msgs/nuturtlebot_msgs/msg/detail/sensor_data__type_support.c
+[2.709s] -- Installing: /ros_ws/aarch64_install/nuturtlebot_msgs/include/nuturtlebot_msgs/nuturtlebot_msgs/msg/detail/sensor_data__struct.h
+[2.709s] -- Installing: /ros_ws/aarch64_install/nuturtlebot_msgs/include/nuturtlebot_msgs/nuturtlebot_msgs/msg/detail/sensor_data__description.c
+[2.710s] -- Installing: /ros_ws/aarch64_install/nuturtlebot_msgs/include/nuturtlebot_msgs/nuturtlebot_msgs/msg/detail/wheel_commands__type_support.c
+[2.710s] -- Installing: /ros_ws/aarch64_install/nuturtlebot_msgs/include/nuturtlebot_msgs/nuturtlebot_msgs/msg/detail/sensor_data__functions.c
+[2.710s] -- Installing: /ros_ws/aarch64_install/nuturtlebot_msgs/include/nuturtlebot_msgs/nuturtlebot_msgs/msg/detail/wheel_commands__functions.h
+[2.710s] -- Installing: /ros_ws/aarch64_install/nuturtlebot_msgs/include/nuturtlebot_msgs/nuturtlebot_msgs/msg/detail/sensor_data__functions.h
+[2.710s] -- Installing: /ros_ws/aarch64_install/nuturtlebot_msgs/include/nuturtlebot_msgs/nuturtlebot_msgs/msg/detail/wheel_commands__description.c
+[2.710s] -- Installing: /ros_ws/aarch64_install/nuturtlebot_msgs/include/nuturtlebot_msgs/nuturtlebot_msgs/msg/detail/wheel_commands__struct.h
+[2.710s] -- Installing: /ros_ws/aarch64_install/nuturtlebot_msgs/include/nuturtlebot_msgs/nuturtlebot_msgs/msg/detail/sensor_data__type_support.h
+[2.710s] -- Installing: /ros_ws/aarch64_install/nuturtlebot_msgs/include/nuturtlebot_msgs/nuturtlebot_msgs/msg/detail/wheel_commands__type_support.h
+[2.710s] -- Installing: /ros_ws/aarch64_install/nuturtlebot_msgs/include/nuturtlebot_msgs/nuturtlebot_msgs/msg/detail/wheel_commands__functions.c
+[2.710s] -- Installing: /ros_ws/aarch64_install/nuturtlebot_msgs/include/nuturtlebot_msgs/nuturtlebot_msgs/msg/sensor_data.h
+[2.710s] -- Installing: /ros_ws/aarch64_install/nuturtlebot_msgs/include/nuturtlebot_msgs/nuturtlebot_msgs/msg/wheel_commands.h
+[2.710s] -- Installing: /ros_ws/aarch64_install/nuturtlebot_msgs/share/nuturtlebot_msgs/environment/library_path.sh
+[2.710s] -- Installing: /ros_ws/aarch64_install/nuturtlebot_msgs/share/nuturtlebot_msgs/environment/library_path.dsv
+[2.710s] -- Installing: /ros_ws/aarch64_install/nuturtlebot_msgs/lib/libnuturtlebot_msgs__rosidl_generator_c.so
+[2.710s] -- Set runtime path of "/ros_ws/aarch64_install/nuturtlebot_msgs/lib/libnuturtlebot_msgs__rosidl_generator_c.so" to ""
+[2.710s] -- Up-to-date: /ros_ws/aarch64_install/nuturtlebot_msgs/include/nuturtlebot_msgs/nuturtlebot_msgs
+[2.710s] -- Up-to-date: /ros_ws/aarch64_install/nuturtlebot_msgs/include/nuturtlebot_msgs/nuturtlebot_msgs/msg
+[2.710s] -- Up-to-date: /ros_ws/aarch64_install/nuturtlebot_msgs/include/nuturtlebot_msgs/nuturtlebot_msgs/msg/detail
+[2.710s] -- Installing: /ros_ws/aarch64_install/nuturtlebot_msgs/include/nuturtlebot_msgs/nuturtlebot_msgs/msg/detail/wheel_commands__rosidl_typesupport_fastrtps_c.h
+[2.710s] -- Installing: /ros_ws/aarch64_install/nuturtlebot_msgs/include/nuturtlebot_msgs/nuturtlebot_msgs/msg/detail/sensor_data__rosidl_typesupport_fastrtps_c.h
+[2.710s] -- Installing: /ros_ws/aarch64_install/nuturtlebot_msgs/include/nuturtlebot_msgs/nuturtlebot_msgs/msg/rosidl_typesupport_fastrtps_c__visibility_control.h
+[2.710s] -- Installing: /ros_ws/aarch64_install/nuturtlebot_msgs/lib/libnuturtlebot_msgs__rosidl_typesupport_fastrtps_c.so
+[2.710s] -- Set runtime path of "/ros_ws/aarch64_install/nuturtlebot_msgs/lib/libnuturtlebot_msgs__rosidl_typesupport_fastrtps_c.so" to ""
+[2.711s] -- Up-to-date: /ros_ws/aarch64_install/nuturtlebot_msgs/include/nuturtlebot_msgs/nuturtlebot_msgs
+[2.711s] -- Up-to-date: /ros_ws/aarch64_install/nuturtlebot_msgs/include/nuturtlebot_msgs/nuturtlebot_msgs/msg
+[2.711s] -- Up-to-date: /ros_ws/aarch64_install/nuturtlebot_msgs/include/nuturtlebot_msgs/nuturtlebot_msgs/msg/detail
+[2.711s] -- Installing: /ros_ws/aarch64_install/nuturtlebot_msgs/include/nuturtlebot_msgs/nuturtlebot_msgs/msg/detail/wheel_commands__builder.hpp
+[2.711s] -- Installing: /ros_ws/aarch64_install/nuturtlebot_msgs/include/nuturtlebot_msgs/nuturtlebot_msgs/msg/detail/sensor_data__traits.hpp
+[2.711s] -- Installing: /ros_ws/aarch64_install/nuturtlebot_msgs/include/nuturtlebot_msgs/nuturtlebot_msgs/msg/detail/wheel_commands__struct.hpp
+[2.711s] -- Installing: /ros_ws/aarch64_install/nuturtlebot_msgs/include/nuturtlebot_msgs/nuturtlebot_msgs/msg/detail/wheel_commands__traits.hpp
+[2.711s] -- Installing: /ros_ws/aarch64_install/nuturtlebot_msgs/include/nuturtlebot_msgs/nuturtlebot_msgs/msg/detail/sensor_data__struct.hpp
+[2.711s] -- Installing: /ros_ws/aarch64_install/nuturtlebot_msgs/include/nuturtlebot_msgs/nuturtlebot_msgs/msg/detail/sensor_data__builder.hpp
+[2.711s] -- Installing: /ros_ws/aarch64_install/nuturtlebot_msgs/include/nuturtlebot_msgs/nuturtlebot_msgs/msg/wheel_commands.hpp
+[2.711s] -- Installing: /ros_ws/aarch64_install/nuturtlebot_msgs/include/nuturtlebot_msgs/nuturtlebot_msgs/msg/sensor_data.hpp
+[2.711s] -- Up-to-date: /ros_ws/aarch64_install/nuturtlebot_msgs/include/nuturtlebot_msgs/nuturtlebot_msgs
+[2.711s] -- Up-to-date: /ros_ws/aarch64_install/nuturtlebot_msgs/include/nuturtlebot_msgs/nuturtlebot_msgs/msg
+[2.711s] -- Up-to-date: /ros_ws/aarch64_install/nuturtlebot_msgs/include/nuturtlebot_msgs/nuturtlebot_msgs/msg/detail
+[2.711s] -- Installing: /ros_ws/aarch64_install/nuturtlebot_msgs/include/nuturtlebot_msgs/nuturtlebot_msgs/msg/detail/dds_fastrtps
+[2.711s] -- Installing: /ros_ws/aarch64_install/nuturtlebot_msgs/include/nuturtlebot_msgs/nuturtlebot_msgs/msg/detail/wheel_commands__rosidl_typesupport_fastrtps_cpp.hpp
+[2.711s] -- Installing: /ros_ws/aarch64_install/nuturtlebot_msgs/include/nuturtlebot_msgs/nuturtlebot_msgs/msg/detail/sensor_data__rosidl_typesupport_fastrtps_cpp.hpp
+[2.711s] -- Installing: /ros_ws/aarch64_install/nuturtlebot_msgs/include/nuturtlebot_msgs/nuturtlebot_msgs/msg/rosidl_typesupport_fastrtps_cpp__visibility_control.h
+[2.711s] -- Installing: /ros_ws/aarch64_install/nuturtlebot_msgs/lib/libnuturtlebot_msgs__rosidl_typesupport_fastrtps_cpp.so
+[2.711s] -- Set runtime path of "/ros_ws/aarch64_install/nuturtlebot_msgs/lib/libnuturtlebot_msgs__rosidl_typesupport_fastrtps_cpp.so" to ""
+[2.711s] -- Up-to-date: /ros_ws/aarch64_install/nuturtlebot_msgs/include/nuturtlebot_msgs/nuturtlebot_msgs
+[2.711s] -- Up-to-date: /ros_ws/aarch64_install/nuturtlebot_msgs/include/nuturtlebot_msgs/nuturtlebot_msgs/msg
+[2.711s] -- Up-to-date: /ros_ws/aarch64_install/nuturtlebot_msgs/include/nuturtlebot_msgs/nuturtlebot_msgs/msg/detail
+[2.711s] -- Up-to-date: /ros_ws/aarch64_install/nuturtlebot_msgs/include/nuturtlebot_msgs/nuturtlebot_msgs/msg/detail/sensor_data__type_support.c
+[2.711s] -- Up-to-date: /ros_ws/aarch64_install/nuturtlebot_msgs/include/nuturtlebot_msgs/nuturtlebot_msgs/msg/detail/wheel_commands__type_support.c
+[2.711s] -- Installing: /ros_ws/aarch64_install/nuturtlebot_msgs/include/nuturtlebot_msgs/nuturtlebot_msgs/msg/detail/sensor_data__rosidl_typesupport_introspection_c.h
+[2.711s] -- Installing: /ros_ws/aarch64_install/nuturtlebot_msgs/include/nuturtlebot_msgs/nuturtlebot_msgs/msg/detail/wheel_commands__rosidl_typesupport_introspection_c.h
+[2.711s] -- Installing: /ros_ws/aarch64_install/nuturtlebot_msgs/include/nuturtlebot_msgs/nuturtlebot_msgs/msg/rosidl_typesupport_introspection_c__visibility_control.h
+[2.711s] -- Installing: /ros_ws/aarch64_install/nuturtlebot_msgs/lib/libnuturtlebot_msgs__rosidl_typesupport_introspection_c.so
+[2.711s] -- Set runtime path of "/ros_ws/aarch64_install/nuturtlebot_msgs/lib/libnuturtlebot_msgs__rosidl_typesupport_introspection_c.so" to ""
+[2.711s] -- Installing: /ros_ws/aarch64_install/nuturtlebot_msgs/lib/libnuturtlebot_msgs__rosidl_typesupport_c.so
+[2.711s] -- Set runtime path of "/ros_ws/aarch64_install/nuturtlebot_msgs/lib/libnuturtlebot_msgs__rosidl_typesupport_c.so" to ""
+[2.711s] -- Up-to-date: /ros_ws/aarch64_install/nuturtlebot_msgs/include/nuturtlebot_msgs/nuturtlebot_msgs
+[2.711s] -- Up-to-date: /ros_ws/aarch64_install/nuturtlebot_msgs/include/nuturtlebot_msgs/nuturtlebot_msgs/msg
+[2.712s] -- Up-to-date: /ros_ws/aarch64_install/nuturtlebot_msgs/include/nuturtlebot_msgs/nuturtlebot_msgs/msg/detail
+[2.712s] -- Installing: /ros_ws/aarch64_install/nuturtlebot_msgs/include/nuturtlebot_msgs/nuturtlebot_msgs/msg/detail/wheel_commands__type_support.cpp
+[2.712s] -- Installing: /ros_ws/aarch64_install/nuturtlebot_msgs/include/nuturtlebot_msgs/nuturtlebot_msgs/msg/detail/sensor_data__rosidl_typesupport_introspection_cpp.hpp
+[2.712s] -- Installing: /ros_ws/aarch64_install/nuturtlebot_msgs/include/nuturtlebot_msgs/nuturtlebot_msgs/msg/detail/wheel_commands__rosidl_typesupport_introspection_cpp.hpp
+[2.712s] -- Installing: /ros_ws/aarch64_install/nuturtlebot_msgs/include/nuturtlebot_msgs/nuturtlebot_msgs/msg/detail/sensor_data__type_support.cpp
+[2.712s] -- Installing: /ros_ws/aarch64_install/nuturtlebot_msgs/lib/libnuturtlebot_msgs__rosidl_typesupport_introspection_cpp.so
+[2.712s] -- Set runtime path of "/ros_ws/aarch64_install/nuturtlebot_msgs/lib/libnuturtlebot_msgs__rosidl_typesupport_introspection_cpp.so" to ""
+[2.712s] -- Installing: /ros_ws/aarch64_install/nuturtlebot_msgs/lib/libnuturtlebot_msgs__rosidl_typesupport_cpp.so
+[2.712s] -- Set runtime path of "/ros_ws/aarch64_install/nuturtlebot_msgs/lib/libnuturtlebot_msgs__rosidl_typesupport_cpp.so" to ""
+[2.712s] -- Installing: /ros_ws/aarch64_install/nuturtlebot_msgs/share/nuturtlebot_msgs/environment/pythonpath.sh
+[2.712s] -- Installing: /ros_ws/aarch64_install/nuturtlebot_msgs/share/nuturtlebot_msgs/environment/pythonpath.dsv
+[2.712s] -- Installing: /ros_ws/aarch64_install/nuturtlebot_msgs/lib/python3.10/site-packages/nuturtlebot_msgs-0.0.2-py3.10.egg-info
+[2.712s] -- Installing: /ros_ws/aarch64_install/nuturtlebot_msgs/lib/python3.10/site-packages/nuturtlebot_msgs-0.0.2-py3.10.egg-info/SOURCES.txt
+[2.712s] -- Installing: /ros_ws/aarch64_install/nuturtlebot_msgs/lib/python3.10/site-packages/nuturtlebot_msgs-0.0.2-py3.10.egg-info/dependency_links.txt
+[2.713s] -- Installing: /ros_ws/aarch64_install/nuturtlebot_msgs/lib/python3.10/site-packages/nuturtlebot_msgs-0.0.2-py3.10.egg-info/PKG-INFO
+[2.713s] -- Installing: /ros_ws/aarch64_install/nuturtlebot_msgs/lib/python3.10/site-packages/nuturtlebot_msgs-0.0.2-py3.10.egg-info/top_level.txt
+[2.713s] -- Installing: /ros_ws/aarch64_install/nuturtlebot_msgs/lib/python3.10/site-packages/nuturtlebot_msgs
+[2.713s] -- Installing: /ros_ws/aarch64_install/nuturtlebot_msgs/lib/python3.10/site-packages/nuturtlebot_msgs/_nuturtlebot_msgs_s.ep.rosidl_typesupport_c.c
+[2.713s] -- Installing: /ros_ws/aarch64_install/nuturtlebot_msgs/lib/python3.10/site-packages/nuturtlebot_msgs/msg
+[2.713s] -- Installing: /ros_ws/aarch64_install/nuturtlebot_msgs/lib/python3.10/site-packages/nuturtlebot_msgs/msg/_sensor_data.py
+[2.713s] -- Installing: /ros_ws/aarch64_install/nuturtlebot_msgs/lib/python3.10/site-packages/nuturtlebot_msgs/msg/_wheel_commands_s.c
+[2.713s] -- Installing: /ros_ws/aarch64_install/nuturtlebot_msgs/lib/python3.10/site-packages/nuturtlebot_msgs/msg/_wheel_commands.py
+[2.713s] -- Installing: /ros_ws/aarch64_install/nuturtlebot_msgs/lib/python3.10/site-packages/nuturtlebot_msgs/msg/_sensor_data_s.c
+[2.713s] -- Installing: /ros_ws/aarch64_install/nuturtlebot_msgs/lib/python3.10/site-packages/nuturtlebot_msgs/msg/__init__.py
+[2.713s] -- Installing: /ros_ws/aarch64_install/nuturtlebot_msgs/lib/python3.10/site-packages/nuturtlebot_msgs/libnuturtlebot_msgs__rosidl_generator_py.so
+[2.713s] -- Installing: /ros_ws/aarch64_install/nuturtlebot_msgs/lib/python3.10/site-packages/nuturtlebot_msgs/nuturtlebot_msgs_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so
+[2.714s] -- Installing: /ros_ws/aarch64_install/nuturtlebot_msgs/lib/python3.10/site-packages/nuturtlebot_msgs/_nuturtlebot_msgs_s.ep.rosidl_typesupport_introspection_c.c
+[2.714s] -- Installing: /ros_ws/aarch64_install/nuturtlebot_msgs/lib/python3.10/site-packages/nuturtlebot_msgs/__init__.py
+[2.714s] -- Installing: /ros_ws/aarch64_install/nuturtlebot_msgs/lib/python3.10/site-packages/nuturtlebot_msgs/_nuturtlebot_msgs_s.ep.rosidl_typesupport_fastrtps_c.c
+[2.714s] -- Installing: /ros_ws/aarch64_install/nuturtlebot_msgs/lib/python3.10/site-packages/nuturtlebot_msgs/nuturtlebot_msgs_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so
+[2.714s] -- Installing: /ros_ws/aarch64_install/nuturtlebot_msgs/lib/python3.10/site-packages/nuturtlebot_msgs/nuturtlebot_msgs_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so
+[2.753s] Listing '/ros_ws/aarch64_install/nuturtlebot_msgs/lib/python3.10/site-packages/nuturtlebot_msgs'...
+[2.753s] Compiling '/ros_ws/aarch64_install/nuturtlebot_msgs/lib/python3.10/site-packages/nuturtlebot_msgs/__init__.py'...
+[2.753s] Listing '/ros_ws/aarch64_install/nuturtlebot_msgs/lib/python3.10/site-packages/nuturtlebot_msgs/msg'...
+[2.753s] Compiling '/ros_ws/aarch64_install/nuturtlebot_msgs/lib/python3.10/site-packages/nuturtlebot_msgs/msg/__init__.py'...
+[2.753s] Compiling '/ros_ws/aarch64_install/nuturtlebot_msgs/lib/python3.10/site-packages/nuturtlebot_msgs/msg/_sensor_data.py'...
+[2.753s] Compiling '/ros_ws/aarch64_install/nuturtlebot_msgs/lib/python3.10/site-packages/nuturtlebot_msgs/msg/_wheel_commands.py'...
+[2.755s] -- Installing: /ros_ws/aarch64_install/nuturtlebot_msgs/lib/python3.10/site-packages/nuturtlebot_msgs/nuturtlebot_msgs_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so
+[2.755s] -- Set runtime path of "/ros_ws/aarch64_install/nuturtlebot_msgs/lib/python3.10/site-packages/nuturtlebot_msgs/nuturtlebot_msgs_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so" to ""
+[2.755s] -- Installing: /ros_ws/aarch64_install/nuturtlebot_msgs/lib/python3.10/site-packages/nuturtlebot_msgs/nuturtlebot_msgs_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so
+[2.755s] -- Set runtime path of "/ros_ws/aarch64_install/nuturtlebot_msgs/lib/python3.10/site-packages/nuturtlebot_msgs/nuturtlebot_msgs_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so" to ""
+[2.755s] -- Installing: /ros_ws/aarch64_install/nuturtlebot_msgs/lib/python3.10/site-packages/nuturtlebot_msgs/nuturtlebot_msgs_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so
+[2.755s] -- Set runtime path of "/ros_ws/aarch64_install/nuturtlebot_msgs/lib/python3.10/site-packages/nuturtlebot_msgs/nuturtlebot_msgs_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so" to ""
+[2.755s] -- Installing: /ros_ws/aarch64_install/nuturtlebot_msgs/lib/libnuturtlebot_msgs__rosidl_generator_py.so
+[2.756s] -- Set runtime path of "/ros_ws/aarch64_install/nuturtlebot_msgs/lib/libnuturtlebot_msgs__rosidl_generator_py.so" to ""
+[2.756s] -- Installing: /ros_ws/aarch64_install/nuturtlebot_msgs/share/nuturtlebot_msgs/msg/SensorData.idl
+[2.756s] -- Installing: /ros_ws/aarch64_install/nuturtlebot_msgs/share/nuturtlebot_msgs/msg/WheelCommands.idl
+[2.756s] -- Installing: /ros_ws/aarch64_install/nuturtlebot_msgs/share/nuturtlebot_msgs/msg/SensorData.msg
+[2.756s] -- Installing: /ros_ws/aarch64_install/nuturtlebot_msgs/share/nuturtlebot_msgs/msg/WheelCommands.msg
+[2.756s] -- Installing: /ros_ws/aarch64_install/nuturtlebot_msgs/share/ament_index/resource_index/package_run_dependencies/nuturtlebot_msgs
+[2.756s] -- Installing: /ros_ws/aarch64_install/nuturtlebot_msgs/share/ament_index/resource_index/parent_prefix_path/nuturtlebot_msgs
+[2.756s] -- Installing: /ros_ws/aarch64_install/nuturtlebot_msgs/share/nuturtlebot_msgs/environment/ament_prefix_path.sh
+[2.756s] -- Installing: /ros_ws/aarch64_install/nuturtlebot_msgs/share/nuturtlebot_msgs/environment/ament_prefix_path.dsv
+[2.756s] -- Installing: /ros_ws/aarch64_install/nuturtlebot_msgs/share/nuturtlebot_msgs/environment/path.sh
+[2.756s] -- Installing: /ros_ws/aarch64_install/nuturtlebot_msgs/share/nuturtlebot_msgs/environment/path.dsv
+[2.756s] -- Installing: /ros_ws/aarch64_install/nuturtlebot_msgs/share/nuturtlebot_msgs/local_setup.bash
+[2.756s] -- Installing: /ros_ws/aarch64_install/nuturtlebot_msgs/share/nuturtlebot_msgs/local_setup.sh
+[2.756s] -- Installing: /ros_ws/aarch64_install/nuturtlebot_msgs/share/nuturtlebot_msgs/local_setup.zsh
+[2.756s] -- Installing: /ros_ws/aarch64_install/nuturtlebot_msgs/share/nuturtlebot_msgs/local_setup.dsv
+[2.756s] -- Up-to-date: /ros_ws/aarch64_install/nuturtlebot_msgs/share/nuturtlebot_msgs/package.dsv
+[2.756s] -- Installing: /ros_ws/aarch64_install/nuturtlebot_msgs/share/ament_index/resource_index/packages/nuturtlebot_msgs
+[2.756s] -- Installing: /ros_ws/aarch64_install/nuturtlebot_msgs/share/nuturtlebot_msgs/cmake/export_nuturtlebot_msgs__rosidl_generator_cExport.cmake
+[2.756s] -- Installing: /ros_ws/aarch64_install/nuturtlebot_msgs/share/nuturtlebot_msgs/cmake/export_nuturtlebot_msgs__rosidl_generator_cExport-noconfig.cmake
+[2.756s] -- Installing: /ros_ws/aarch64_install/nuturtlebot_msgs/share/nuturtlebot_msgs/cmake/export_nuturtlebot_msgs__rosidl_typesupport_fastrtps_cExport.cmake
+[2.756s] -- Installing: /ros_ws/aarch64_install/nuturtlebot_msgs/share/nuturtlebot_msgs/cmake/export_nuturtlebot_msgs__rosidl_typesupport_fastrtps_cExport-noconfig.cmake
+[2.756s] -- Installing: /ros_ws/aarch64_install/nuturtlebot_msgs/share/nuturtlebot_msgs/cmake/export_nuturtlebot_msgs__rosidl_generator_cppExport.cmake
+[2.756s] -- Installing: /ros_ws/aarch64_install/nuturtlebot_msgs/share/nuturtlebot_msgs/cmake/export_nuturtlebot_msgs__rosidl_typesupport_fastrtps_cppExport.cmake
+[2.756s] -- Installing: /ros_ws/aarch64_install/nuturtlebot_msgs/share/nuturtlebot_msgs/cmake/export_nuturtlebot_msgs__rosidl_typesupport_fastrtps_cppExport-noconfig.cmake
+[2.756s] -- Installing: /ros_ws/aarch64_install/nuturtlebot_msgs/share/nuturtlebot_msgs/cmake/nuturtlebot_msgs__rosidl_typesupport_introspection_cExport.cmake
+[2.757s] -- Installing: /ros_ws/aarch64_install/nuturtlebot_msgs/share/nuturtlebot_msgs/cmake/nuturtlebot_msgs__rosidl_typesupport_introspection_cExport-noconfig.cmake
+[2.757s] -- Installing: /ros_ws/aarch64_install/nuturtlebot_msgs/share/nuturtlebot_msgs/cmake/nuturtlebot_msgs__rosidl_typesupport_cExport.cmake
+[2.757s] -- Installing: /ros_ws/aarch64_install/nuturtlebot_msgs/share/nuturtlebot_msgs/cmake/nuturtlebot_msgs__rosidl_typesupport_cExport-noconfig.cmake
+[2.757s] -- Installing: /ros_ws/aarch64_install/nuturtlebot_msgs/share/nuturtlebot_msgs/cmake/nuturtlebot_msgs__rosidl_typesupport_introspection_cppExport.cmake
+[2.757s] -- Installing: /ros_ws/aarch64_install/nuturtlebot_msgs/share/nuturtlebot_msgs/cmake/nuturtlebot_msgs__rosidl_typesupport_introspection_cppExport-noconfig.cmake
+[2.757s] -- Installing: /ros_ws/aarch64_install/nuturtlebot_msgs/share/nuturtlebot_msgs/cmake/nuturtlebot_msgs__rosidl_typesupport_cppExport.cmake
+[2.757s] -- Installing: /ros_ws/aarch64_install/nuturtlebot_msgs/share/nuturtlebot_msgs/cmake/nuturtlebot_msgs__rosidl_typesupport_cppExport-noconfig.cmake
+[2.757s] -- Installing: /ros_ws/aarch64_install/nuturtlebot_msgs/share/nuturtlebot_msgs/cmake/export_nuturtlebot_msgs__rosidl_generator_pyExport.cmake
+[2.757s] -- Installing: /ros_ws/aarch64_install/nuturtlebot_msgs/share/nuturtlebot_msgs/cmake/export_nuturtlebot_msgs__rosidl_generator_pyExport-noconfig.cmake
+[2.757s] -- Installing: /ros_ws/aarch64_install/nuturtlebot_msgs/share/nuturtlebot_msgs/cmake/rosidl_cmake-extras.cmake
+[2.757s] -- Installing: /ros_ws/aarch64_install/nuturtlebot_msgs/share/nuturtlebot_msgs/cmake/ament_cmake_export_dependencies-extras.cmake
+[2.757s] -- Installing: /ros_ws/aarch64_install/nuturtlebot_msgs/share/nuturtlebot_msgs/cmake/ament_cmake_export_include_directories-extras.cmake
+[2.757s] -- Installing: /ros_ws/aarch64_install/nuturtlebot_msgs/share/nuturtlebot_msgs/cmake/ament_cmake_export_libraries-extras.cmake
+[2.757s] -- Installing: /ros_ws/aarch64_install/nuturtlebot_msgs/share/nuturtlebot_msgs/cmake/ament_cmake_export_targets-extras.cmake
+[2.757s] -- Installing: /ros_ws/aarch64_install/nuturtlebot_msgs/share/nuturtlebot_msgs/cmake/rosidl_cmake_export_typesupport_targets-extras.cmake
+[2.757s] -- Installing: /ros_ws/aarch64_install/nuturtlebot_msgs/share/nuturtlebot_msgs/cmake/rosidl_cmake_export_typesupport_libraries-extras.cmake
+[2.757s] -- Installing: /ros_ws/aarch64_install/nuturtlebot_msgs/share/nuturtlebot_msgs/cmake/nuturtlebot_msgsConfig.cmake
+[2.757s] -- Installing: /ros_ws/aarch64_install/nuturtlebot_msgs/share/nuturtlebot_msgs/cmake/nuturtlebot_msgsConfig-version.cmake
+[2.757s] -- Installing: /ros_ws/aarch64_install/nuturtlebot_msgs/share/nuturtlebot_msgs/package.xml
+[2.759s] Invoked command in '/ros_ws/aarch64_build/nuturtlebot_msgs' returned '0': CMAKE_PREFIX_PATH=/opt/ros/iron /usr/bin/cmake --install /ros_ws/aarch64_build/nuturtlebot_msgs

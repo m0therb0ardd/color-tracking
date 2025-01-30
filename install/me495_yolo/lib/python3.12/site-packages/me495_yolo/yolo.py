@@ -306,7 +306,7 @@ import time
 from scipy.interpolate import splprep, splev
 from std_msgs.msg import Float32MultiArray
 from nav_msgs.msg import Path
-
+from visualization_msgs.msg import Marker, MarkerArray  # Import this
 
 
 class YoloNode(Node):
@@ -327,7 +327,9 @@ class YoloNode(Node):
         super().__init__("color_tracker")
         self.bridge = CvBridge()
         self.create_subscription(Image, 'image', self.yolo_callback, 10)
-        self.create_subscription(Path, 'waypoints', self.waypoint_callback, 10)
+        #self.create_subscription(Path, 'waypoints', self.waypoint_callback, 10)
+        self.create_subscription(MarkerArray, 'waypoint_markers', self.marker_callback, 10)
+
         self.pub = self.create_publisher(Image, 'new_image', 10)
         self.path_publisher = self.create_publisher(Float32MultiArray, 'path_points', 10)
 
@@ -335,13 +337,15 @@ class YoloNode(Node):
         # Store the path as a list of centroids
         self.path = []
         self.waypoints = []
+        self.waypoint_markers = []  # Initialize an empty list
+
 
         # Define the color to track (yellow)
-        self.color_name = "yellow"
-        self.color_range = ((25, 50, 50), (35, 255, 255))  # HSV range for yellow
+        #self.color_name = "yellow"
+        #self.color_range = ((25, 50, 50), (35, 255, 255))  # HSV range for yellow
 
-        # self.color_name = "pink"
-        # self.color_range = ((145, 50, 50), (165, 255, 255))  # HSV range for pink
+        self.color_name = "pink"
+        self.color_range = ((145, 50, 50), (165, 255, 255))  # HSV range for pink
 
         # self.color_name = "orange"
         # self.color_range =  ((5, 50, 50), (15, 255, 255))
@@ -500,9 +504,12 @@ class YoloNode(Node):
         path_msg.data = [coord for point in self.path for coord in point]
         self.path_publisher.publish(path_msg)
 
-        # Draw waypoints as red dots
-        for x, y in self.waypoints:
-            cv2.circle(annotated_image, (x, y), 5, (0, 0, 255), -1)  # Red dot for waypoints
+        # Draw waypoints as red dots from waypoint_markers
+        for marker in self.waypoint_markers:
+            x = int(marker.pose.position.x)
+            y = int(marker.pose.position.y)
+            cv2.circle(annotated_image, (x, y), 5, (0, 0, 255), -1)  # Red dot
+
 
 
         # Convert the annotated image back to ROS Image message
@@ -510,6 +517,10 @@ class YoloNode(Node):
         # Publish the annotated image
         self.pub.publish(new_msg)
 
+    def marker_callback(self, msg):
+        """Callback to receive waypoint markers and store them for visualization."""
+        self.get_logger().info(f"Received {len(msg.markers)} markers")
+        self.waypoint_markers = msg.markers
 
 
 

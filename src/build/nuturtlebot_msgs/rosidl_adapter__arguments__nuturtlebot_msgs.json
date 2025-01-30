@@ -1,0 +1,7 @@
+{
+  "package_name": "nuturtlebot_msgs",
+  "non_idl_tuples": [
+    "/home/catherine-maglione/yolo_home/src/nuturtlebot_msgs:msg/SensorData.msg",
+    "/home/catherine-maglione/yolo_home/src/nuturtlebot_msgs:msg/WheelCommands.msg"
+  ]
+}

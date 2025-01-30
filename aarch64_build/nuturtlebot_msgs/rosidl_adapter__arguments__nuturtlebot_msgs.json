@@ -1,0 +1,7 @@
+{
+  "package_name": "nuturtlebot_msgs",
+  "non_idl_tuples": [
+    "/ros_ws/src/nuturtlebot_msgs:msg/SensorData.msg",
+    "/ros_ws/src/nuturtlebot_msgs:msg/WheelCommands.msg"
+  ]
+}

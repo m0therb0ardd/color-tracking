@@ -1,0 +1,4 @@
+source;share/nuturtlebot_msgs/local_setup.bash
+source;share/nuturtlebot_msgs/local_setup.dsv
+source;share/nuturtlebot_msgs/local_setup.sh
+source;share/nuturtlebot_msgs/local_setup.zsh

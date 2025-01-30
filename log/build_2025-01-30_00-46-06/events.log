@@ -1,0 +1,60 @@
+[0.000000] (-) TimerEvent: {}
+[0.000620] (-) JobUnselected: {'identifier': 'me495_yolo'}
+[0.001126] (-) JobUnselected: {'identifier': 'numsr_turtlebot'}
+[0.001142] (nuturtlebot_msgs) JobQueued: {'identifier': 'nuturtlebot_msgs', 'dependencies': OrderedDict()}
+[0.001153] (nuturtlebot_msgs) JobStarted: {'identifier': 'nuturtlebot_msgs'}
+[0.019211] (nuturtlebot_msgs) JobProgress: {'identifier': 'nuturtlebot_msgs', 'progress': 'cmake'}
+[0.019454] (nuturtlebot_msgs) Command: {'cmd': ['/usr/bin/cmake', '/ros_ws/src/nuturtlebot_msgs', '-DCMAKE_TOOLCHAIN_FILE=/toolchain.cmake', '-DCMAKE_INSTALL_PREFIX=aarch64_install', '-DCMAKE_INSTALL_PREFIX=/ros_ws/aarch64_install/nuturtlebot_msgs'], 'cwd': '/ros_ws/aarch64_build/nuturtlebot_msgs', 'env': OrderedDict([('HOSTNAME', '6993ec946046'), ('LD_LIBRARY_PATH', '/opt/ros/iron/opt/rviz_ogre_vendor/lib:/opt/ros/iron/lib/aarch64-linux-gnu:/opt/ros/iron/lib'), ('HOME', '/'), ('ROS_PYTHON_VERSION', '3'), ('ROS_DISTRO', 'iron'), ('ROS_VERSION', '2'), ('TERM', 'xterm'), ('PATH', '/opt/ros/iron/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'), ('LANG', 'en_US.UTF-8'), ('AMENT_PREFIX_PATH', '/opt/ros/iron'), ('ROS_AUTOMATIC_DISCOVERY_RANGE', 'SUBNET'), ('PWD', '/ros_ws/aarch64_build/nuturtlebot_msgs'), ('PYTHONPATH', '/opt/ros/iron/lib/python3.10/site-packages'), ('COLCON', '1'), ('CMAKE_PREFIX_PATH', '/opt/ros/iron')]), 'shell': False}
+[0.072293] (nuturtlebot_msgs) StdoutLine: {'line': b'-- The C compiler identification is GNU 11.4.0\n'}
+[0.099820] (-) TimerEvent: {}
+[0.140190] (nuturtlebot_msgs) StdoutLine: {'line': b'-- The CXX compiler identification is GNU 11.4.0\n'}
+[0.146579] (nuturtlebot_msgs) StdoutLine: {'line': b'-- Detecting C compiler ABI info\n'}
+[0.200019] (-) TimerEvent: {}
+[0.236798] (nuturtlebot_msgs) StdoutLine: {'line': b'-- Detecting C compiler ABI info - done\n'}
+[0.243602] (nuturtlebot_msgs) StdoutLine: {'line': b'-- Check for working C compiler: /usr/bin/aarch64-linux-gnu-gcc - skipped\n'}
+[0.244081] (nuturtlebot_msgs) StdoutLine: {'line': b'-- Detecting C compile features\n'}
+[0.244607] (nuturtlebot_msgs) StdoutLine: {'line': b'-- Detecting C compile features - done\n'}
+[0.246432] (nuturtlebot_msgs) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info\n'}
+[0.300185] (-) TimerEvent: {}
+[0.345702] (nuturtlebot_msgs) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info - done\n'}
+[0.354855] (nuturtlebot_msgs) StdoutLine: {'line': b'-- Check for working CXX compiler: /usr/bin/aarch64-linux-gnu-g++ - skipped\n'}
+[0.355140] (nuturtlebot_msgs) StdoutLine: {'line': b'-- Detecting CXX compile features\n'}
+[0.355892] (nuturtlebot_msgs) StdoutLine: {'line': b'-- Detecting CXX compile features - done\n'}
+[0.359231] (nuturtlebot_msgs) StdoutLine: {'line': b'-- Found ament_cmake: 2.0.3 (/opt/ros/iron/share/ament_cmake/cmake)\n'}
+[0.400415] (-) TimerEvent: {}
+[0.483107] (nuturtlebot_msgs) StdoutLine: {'line': b'-- Found Python3: /usr/bin/python3.10 (found version "3.10.12") found components: Interpreter \n'}
+[0.500507] (-) TimerEvent: {}
+[0.585822] (nuturtlebot_msgs) StdoutLine: {'line': b'-- Found builtin_interfaces: 1.6.0 (/opt/ros/iron/share/builtin_interfaces/cmake)\n'}
+[0.600607] (-) TimerEvent: {}
+[0.603409] (nuturtlebot_msgs) StdoutLine: {'line': b'-- Found rosidl_generator_c: 4.0.1 (/opt/ros/iron/share/rosidl_generator_c/cmake)\n'}
+[0.611244] (nuturtlebot_msgs) StdoutLine: {'line': b'-- Found rosidl_generator_cpp: 4.0.1 (/opt/ros/iron/share/rosidl_generator_cpp/cmake)\n'}
+[0.618429] (nuturtlebot_msgs) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[0.627299] (nuturtlebot_msgs) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[0.635387] (nuturtlebot_msgs) StdoutLine: {'line': b'-- Found rosidl_default_generators: 1.5.0 (/opt/ros/iron/share/rosidl_default_generators/cmake)\n'}
+[0.640678] (nuturtlebot_msgs) StdoutLine: {'line': b'-- Found rosidl_adapter: 4.0.1 (/opt/ros/iron/share/rosidl_adapter/cmake)\n'}
+[0.700689] (-) TimerEvent: {}
+[0.800975] (-) TimerEvent: {}
+[0.879630] (nuturtlebot_msgs) StdoutLine: {'line': b'-- Found ament_cmake_ros: 0.11.2 (/opt/ros/iron/share/ament_cmake_ros/cmake)\n'}
+[0.901171] (-) TimerEvent: {}
+[1.001346] (-) TimerEvent: {}
+[1.101535] (-) TimerEvent: {}
+[1.108768] (nuturtlebot_msgs) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[1.185794] (nuturtlebot_msgs) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[1.201745] (-) TimerEvent: {}
+[1.202742] (nuturtlebot_msgs) StdoutLine: {'line': b'-- Found PythonInterp: /usr/bin/python3 (found suitable version "3.10.12", minimum required is "3.6") \n'}
+[1.203571] (nuturtlebot_msgs) StdoutLine: {'line': b'-- Found python_cmake_module: 0.10.2 (/opt/ros/iron/share/python_cmake_module/cmake)\n'}
+[1.223210] (nuturtlebot_msgs) StdoutLine: {'line': b'-- Found PythonLibs: /usr/lib/aarch64-linux-gnu/libpython3.10.so (found suitable version "3.10.4", minimum required is "3.5") \n'}
+[1.223395] (nuturtlebot_msgs) StdoutLine: {'line': b'-- Using PYTHON_EXECUTABLE: /usr/bin/python3\n'}
+[1.223474] (nuturtlebot_msgs) StdoutLine: {'line': b'-- Using PYTHON_INCLUDE_DIRS: /usr/include/python3.10\n'}
+[1.223546] (nuturtlebot_msgs) StdoutLine: {'line': b'-- Using PYTHON_LIBRARIES: /usr/lib/aarch64-linux-gnu/libpython3.10.so\n'}
+[1.248763] (nuturtlebot_msgs) StdoutLine: {'line': b'-- Found PythonExtra: .so  \n'}
+[1.271830] (nuturtlebot_msgs) StdoutLine: {'line': b'-- Configuring done\n'}
+[1.284969] (nuturtlebot_msgs) StderrLine: {'line': b'\x1b[0mCMake Error: install(EXPORT "export_nuturtlebot_msgs__rosidl_generator_py" ...) includes target "nuturtlebot_msgs__rosidl_generator_py" which requires target "nuturtlebot_msgs__rosidl_typesupport_c" that is not in this export set, but in multiple other export sets: share/nuturtlebot_msgs/cmake/nuturtlebot_msgs__rosidl_typesupport_cExport.cmake, share/nuturtlebot_msgs/cmake/nuturtlebot_msgs__rosidl_typesupport_cExport.cmake.\n'}
+[1.285119] (nuturtlebot_msgs) StderrLine: {'line': b'An exported target cannot depend upon another target which is exported multiple times. Consider consolidating the exports of the "nuturtlebot_msgs__rosidl_typesupport_c" target to a single export.\x1b[0m\n'}
+[1.285179] (nuturtlebot_msgs) StderrLine: {'line': b'\x1b[0mCMake Error: INSTALL(EXPORT) given unknown export "nuturtlebot_msgs__rosidl_typesupport_py-NOTFOUND"\x1b[0m\n'}
+[1.285698] (nuturtlebot_msgs) StdoutLine: {'line': b'-- Generating done\n'}
+[1.286619] (nuturtlebot_msgs) StderrLine: {'line': b'\x1b[0mCMake Generate step failed.  Build files cannot be regenerated correctly.\x1b[0m\n'}
+[1.291079] (nuturtlebot_msgs) CommandEnded: {'returncode': 1}
+[1.302836] (-) TimerEvent: {}
+[1.310412] (nuturtlebot_msgs) JobEnded: {'identifier': 'nuturtlebot_msgs', 'rc': 1}
+[1.320770] (-) EventReactorShutdown: {}

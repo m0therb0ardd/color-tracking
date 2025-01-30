@@ -1,0 +1,11 @@
+{
+  "package_name": "nuturtlebot_msgs",
+  "output_dir": "/home/catherine-maglione/yolo_home/src/build/nuturtlebot_msgs/rosidl_generator_type_description/nuturtlebot_msgs",
+  "idl_tuples": [
+    "/home/catherine-maglione/yolo_home/src/build/nuturtlebot_msgs/rosidl_adapter/nuturtlebot_msgs:msg/SensorData.idl",
+    "/home/catherine-maglione/yolo_home/src/build/nuturtlebot_msgs/rosidl_adapter/nuturtlebot_msgs:msg/WheelCommands.idl"
+  ],
+  "include_paths": [
+    "builtin_interfaces:/opt/ros/jazzy/share/builtin_interfaces"
+  ]
+}

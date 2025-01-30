@@ -8,6 +8,7 @@ from cv_bridge import CvBridge
 import cv2
 import numpy as np
 from scipy.interpolate import splprep, splev
+from visualization_msgs.msg import Marker, MarkerArray  # Import for visualization
 
 
 class WaypointNode(Node):
@@ -21,13 +22,15 @@ class WaypointNode(Node):
         # Publishers
         self.waypoint_publisher = self.create_publisher(Path, 'waypoints', 10)
         self.image_publisher = self.create_publisher(Image, 'waypoint_image', 10)
+        self.marker_publisher = self.create_publisher(MarkerArray, 'waypoint_markers', 10)
+
 
         # ROS utilities
         self.bridge = CvBridge()
         self.latest_image = None  # Store the latest image
 
         # Parameters for B-spline
-        self.declare_parameter('num_waypoints', 25)
+        self.declare_parameter('num_waypoints', 50)
         self.declare_parameter('smoothness', 10)
 
     def image_callback(self, msg):
@@ -36,22 +39,23 @@ class WaypointNode(Node):
 
     def path_callback(self, msg):
         """Generate waypoints and annotate the image with them."""
-        # Convert the flat array back to a list of (x, y) points
         path = [(msg.data[i], msg.data[i + 1]) for i in range(0, len(msg.data), 2)]
 
-        # Generate waypoints using B-spline
+        if not path:
+            self.get_logger().warn("Received an empty path!")
+
         num_waypoints = self.get_parameter('num_waypoints').get_parameter_value().integer_value
         smoothness = self.get_parameter('smoothness').get_parameter_value().double_value
         waypoints = self.create_b_spline_waypoints(path, num_waypoints, smoothness)
 
-        # Publish the waypoints as a ROS Path message
+        if not waypoints:
+            self.get_logger().warn("No waypoints generated!")
+
+        self.get_logger().warn("Path must have at least 4 points for B-spline.")
         self.publish_b_spline_path(waypoints)
 
-        # Annotate and publish the image with waypoints
-        if self.latest_image is not None:
-            self.annotate_and_publish_image(self.latest_image, waypoints)
 
-    def create_b_spline_waypoints(self, path, num_waypoints=25, smoothness=10):
+    def create_b_spline_waypoints(self, path, num_waypoints=50, smoothness=10):
         """Generate waypoints using a B-spline curve."""
         if len(path) < 4:  # B-splines require at least 4 points
             self.get_logger().warn("Path must have at least 4 points for B-spline.")
@@ -77,20 +81,26 @@ class WaypointNode(Node):
         return waypoints
 
     def publish_b_spline_path(self, waypoints):
-        """Publish the waypoints as a ROS Path message."""
+        """Publish the waypoints as both a ROS Path message and visualization markers."""
+        
+        # Publish Path message
         path_msg = Path()
-        path_msg.header.frame_id = "map"  # Set the appropriate frame
+        path_msg.header.frame_id = "map"
         path_msg.header.stamp = self.get_clock().now().to_msg()
 
-        for x, y in waypoints:
+        for i, (x, y) in enumerate(waypoints):
             pose = PoseStamped()
             pose.header.frame_id = "map"
-            pose.pose.position.x =float(x)
+            pose.pose.position.x = float(x)
             pose.pose.position.y = float(y)
             pose.pose.orientation.w = 1.0
             path_msg.poses.append(pose)
 
         self.waypoint_publisher.publish(path_msg)
+
+        # Publish markers for individual waypoints
+        self.publish_waypoint_markers(waypoints)
+
 
     def annotate_and_publish_image(self, image, waypoints):
         """Annotate the image with waypoints and publish it."""
@@ -105,6 +115,36 @@ class WaypointNode(Node):
 
         # Publish the annotated image
         self.image_publisher.publish(annotated_msg)
+
+    def publish_waypoint_markers(self, waypoints):
+        """Publish individual waypoints as visualization markers in RViz."""
+        marker_array = MarkerArray()
+
+        for i, (x, y) in enumerate(waypoints):
+            marker = Marker()
+            marker.header.frame_id = "map"
+            marker.header.stamp = self.get_clock().now().to_msg()
+            marker.ns = "waypoints"
+            marker.id = i
+            marker.type = Marker.SPHERE
+            marker.action = Marker.ADD
+            marker.pose.position.x = float(x)
+            marker.pose.position.y = float(y)
+            marker.pose.orientation.w = 1.0
+            marker.scale.x = 0.1  # Size of the marker
+            marker.scale.y = 0.1
+            marker.scale.z = 0.1
+            marker.color.r = 1.0  # Red
+            marker.color.g = 0.0
+            marker.color.b = 0.0
+            marker.color.a = 1.0  # Fully visible
+
+            marker_array.markers.append(marker)
+
+        self.marker_publisher.publish(marker_array)
+
+
+
 
 
 def main(args=None):
