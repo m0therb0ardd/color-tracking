@@ -1,0 +1,16 @@
+/home/catherine-maglione/yolo_home/src/install/numsr_turtlebot/lib/numsr_turtlebot/numsr_turtlebot
+/home/catherine-maglione/yolo_home/src/install/numsr_turtlebot/share/ament_index/resource_index/package_run_dependencies/numsr_turtlebot
+/home/catherine-maglione/yolo_home/src/install/numsr_turtlebot/share/ament_index/resource_index/parent_prefix_path/numsr_turtlebot
+/home/catherine-maglione/yolo_home/src/install/numsr_turtlebot/share/numsr_turtlebot/environment/ament_prefix_path.sh
+/home/catherine-maglione/yolo_home/src/install/numsr_turtlebot/share/numsr_turtlebot/environment/ament_prefix_path.dsv
+/home/catherine-maglione/yolo_home/src/install/numsr_turtlebot/share/numsr_turtlebot/environment/path.sh
+/home/catherine-maglione/yolo_home/src/install/numsr_turtlebot/share/numsr_turtlebot/environment/path.dsv
+/home/catherine-maglione/yolo_home/src/install/numsr_turtlebot/share/numsr_turtlebot/local_setup.bash
+/home/catherine-maglione/yolo_home/src/install/numsr_turtlebot/share/numsr_turtlebot/local_setup.sh
+/home/catherine-maglione/yolo_home/src/install/numsr_turtlebot/share/numsr_turtlebot/local_setup.zsh
+/home/catherine-maglione/yolo_home/src/install/numsr_turtlebot/share/numsr_turtlebot/local_setup.dsv
+/home/catherine-maglione/yolo_home/src/install/numsr_turtlebot/share/numsr_turtlebot/package.dsv
+/home/catherine-maglione/yolo_home/src/install/numsr_turtlebot/share/ament_index/resource_index/packages/numsr_turtlebot
+/home/catherine-maglione/yolo_home/src/install/numsr_turtlebot/share/numsr_turtlebot/cmake/numsr_turtlebotConfig.cmake
+/home/catherine-maglione/yolo_home/src/install/numsr_turtlebot/share/numsr_turtlebot/cmake/numsr_turtlebotConfig-version.cmake
+/home/catherine-maglione/yolo_home/src/install/numsr_turtlebot/share/numsr_turtlebot/package.xml

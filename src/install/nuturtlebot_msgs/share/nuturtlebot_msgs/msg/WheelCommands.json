@@ -1,0 +1,36 @@
+{
+  "type_description_msg": {
+    "type_description": {
+      "type_name": "nuturtlebot_msgs/msg/WheelCommands",
+      "fields": [
+        {
+          "name": "left_velocity",
+          "type": {
+            "type_id": 6,
+            "capacity": 0,
+            "string_capacity": 0,
+            "nested_type_name": ""
+          },
+          "default_value": ""
+        },
+        {
+          "name": "right_velocity",
+          "type": {
+            "type_id": 6,
+            "capacity": 0,
+            "string_capacity": 0,
+            "nested_type_name": ""
+          },
+          "default_value": ""
+        }
+      ]
+    },
+    "referenced_type_descriptions": []
+  },
+  "type_hashes": [
+    {
+      "type_name": "nuturtlebot_msgs/msg/WheelCommands",
+      "hash_string": "RIHS01_656fa954e427663c7a8620ab34bacb54a35ff278470ddf2b7cacfa77c225f780"
+    }
+  ]
+}
