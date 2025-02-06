@@ -1,4 +1,0 @@
-  File "/home/catherine-maglione/yolo_home/src/install/me495_yolo/lib/python3.12/site-packages/me495_yolo/waypoint.py", line 141
-    return transformed_waypoints
-SyntaxError: expected 'except' or 'finally' block
-

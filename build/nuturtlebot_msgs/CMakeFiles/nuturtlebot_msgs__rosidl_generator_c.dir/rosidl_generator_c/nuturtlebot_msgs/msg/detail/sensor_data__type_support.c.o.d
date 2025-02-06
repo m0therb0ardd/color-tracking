@@ -41,8 +41,6 @@ CMakeFiles/nuturtlebot_msgs__rosidl_generator_c.dir/rosidl_generator_c/nuturtleb
  /opt/ros/jazzy/include/rcutils/rcutils/visibility_control_macros.h \
  /opt/ros/jazzy/include/rcutils/rcutils/sha256.h \
  /opt/ros/jazzy/include/rosidl_runtime_c/rosidl_runtime_c/visibility_control.h \
- /home/catherine-maglione/yolo_home/build/nuturtlebot_msgs/rosidl_generator_c/nuturtlebot_msgs/msg/detail/sensor_data__struct.h \
- /opt/ros/jazzy/include/builtin_interfaces/builtin_interfaces/msg/detail/time__struct.h \
  /home/catherine-maglione/yolo_home/build/nuturtlebot_msgs/rosidl_generator_c/nuturtlebot_msgs/msg/detail/sensor_data__functions.h \
  /usr/include/stdlib.h /usr/include/x86_64-linux-gnu/bits/waitflags.h \
  /usr/include/x86_64-linux-gnu/bits/waitstatus.h \
@@ -71,4 +69,6 @@ CMakeFiles/nuturtlebot_msgs__rosidl_generator_c.dir/rosidl_generator_c/nuturtleb
  /usr/include/x86_64-linux-gnu/bits/struct_rwlock.h /usr/include/alloca.h \
  /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
  /opt/ros/jazzy/include/rosidl_runtime_c/rosidl_runtime_c/action_type_support_struct.h \
- /opt/ros/jazzy/include/rosidl_runtime_c/rosidl_runtime_c/service_type_support_struct.h
+ /opt/ros/jazzy/include/rosidl_runtime_c/rosidl_runtime_c/service_type_support_struct.h \
+ /home/catherine-maglione/yolo_home/build/nuturtlebot_msgs/rosidl_generator_c/nuturtlebot_msgs/msg/detail/sensor_data__struct.h \
+ /opt/ros/jazzy/include/builtin_interfaces/builtin_interfaces/msg/detail/time__struct.h

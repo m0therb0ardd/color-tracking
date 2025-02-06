@@ -1,2 +1,0 @@
-Invoking command in '/ros_ws/aarch64_build/nuturtlebot_msgs': CMAKE_PREFIX_PATH=/opt/ros/iron /usr/bin/cmake /ros_ws/src/nuturtlebot_msgs -DCMAKE_TOOLCHAIN_FILE=/toolchain.cmake -DCMAKE_INSTALL_PREFIX=aarch64_install -DCMAKE_INSTALL_PREFIX=/ros_ws/aarch64_install/nuturtlebot_msgs
-Invoked command in '/ros_ws/aarch64_build/nuturtlebot_msgs' returned '1': CMAKE_PREFIX_PATH=/opt/ros/iron /usr/bin/cmake /ros_ws/src/nuturtlebot_msgs -DCMAKE_TOOLCHAIN_FILE=/toolchain.cmake -DCMAKE_INSTALL_PREFIX=aarch64_install -DCMAKE_INSTALL_PREFIX=/ros_ws/aarch64_install/nuturtlebot_msgs

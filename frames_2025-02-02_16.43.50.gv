@@ -1,0 +1,12 @@
+digraph G {
+"camera_color_optical_frame" -> "dancer_pink_object"[label=" Broadcaster: default_authority\nAverage rate: 21.184\nBuffer length: 5.004\nMost recent transform: 1738536230.186166\nOldest transform: 1738536225.182281\n"];
+"camera_color_frame" -> "camera_color_optical_frame"[label=" Broadcaster: default_authority\nAverage rate: 10000.0\nBuffer length: 0.0\nMost recent transform: 0.0\nOldest transform: 0.0\n"];
+"camera_link" -> "camera_depth_frame"[label=" Broadcaster: default_authority\nAverage rate: 10000.0\nBuffer length: 0.0\nMost recent transform: 0.0\nOldest transform: 0.0\n"];
+"camera_depth_frame" -> "camera_depth_optical_frame"[label=" Broadcaster: default_authority\nAverage rate: 10000.0\nBuffer length: 0.0\nMost recent transform: 0.0\nOldest transform: 0.0\n"];
+"camera_link" -> "camera_color_frame"[label=" Broadcaster: default_authority\nAverage rate: 10000.0\nBuffer length: 0.0\nMost recent transform: 0.0\nOldest transform: 0.0\n"];
+"camera_color_optical_frame" -> "turtlebot_base"[label=" Broadcaster: default_authority\nAverage rate: 14.68\nBuffer length: 4.905\nMost recent transform: 1738536230.090689\nOldest transform: 1738536225.185904\n"];
+edge [style=invis];
+ subgraph cluster_legend { style=bold; color=black; label ="view_frames Result";
+"Recorded at time: 1738536230.193259"[ shape=plaintext ] ;
+}->"camera_link";
+}

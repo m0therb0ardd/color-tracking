@@ -8,6 +8,7 @@ setup.py
 ../../build/me495_yolo/me495_yolo.egg-info/top_level.txt
 ../../build/me495_yolo/me495_yolo.egg-info/zip-safe
 me495_yolo/__init__.py
+me495_yolo/local_waypoint_follower.py
 me495_yolo/waypoint.py
 me495_yolo/waypoint_follower.py
 me495_yolo/yolo.py

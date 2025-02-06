@@ -1,0 +1,22 @@
+[0.497s] Invoking command in '/home/catherine-maglione/yolo_home/src/me495_yolo': AMENT_PREFIX_PATH=/home/catherine-maglione/yolo_home/install/nuturtlebot_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/catherine-maglione/yolo_home/install/nuturtlebot_msgs:${CMAKE_PREFIX_PATH} LD_LIBRARY_PATH=/home/catherine-maglione/yolo_home/install/nuturtlebot_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/catherine-maglione/yolo_home/build/me495_yolo/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/catherine-maglione/yolo_home/install/me495_yolo/lib/python3.12/site-packages:/home/catherine-maglione/yolo_home/install/nuturtlebot_msgs/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../../build/me495_yolo build --build-base /home/catherine-maglione/yolo_home/build/me495_yolo/build install --record /home/catherine-maglione/yolo_home/build/me495_yolo/install.log --single-version-externally-managed install_data
+[0.639s] running egg_info
+[0.650s] writing ../../build/me495_yolo/me495_yolo.egg-info/PKG-INFO
+[0.659s] writing dependency_links to ../../build/me495_yolo/me495_yolo.egg-info/dependency_links.txt
+[0.659s] writing entry points to ../../build/me495_yolo/me495_yolo.egg-info/entry_points.txt
+[0.659s] writing top-level names to ../../build/me495_yolo/me495_yolo.egg-info/top_level.txt
+[0.681s] reading manifest file '../../build/me495_yolo/me495_yolo.egg-info/SOURCES.txt'
+[0.681s] writing manifest file '../../build/me495_yolo/me495_yolo.egg-info/SOURCES.txt'
+[0.681s] running build
+[0.681s] running build_py
+[0.682s] running install
+[0.685s] running install_lib
+[0.697s] running install_data
+[0.697s] running install_egg_info
+[0.709s] removing '/home/catherine-maglione/yolo_home/install/me495_yolo/lib/python3.12/site-packages/me495_yolo-0.0.0-py3.12.egg-info' (and everything under it)
+[0.709s] Copying ../../build/me495_yolo/me495_yolo.egg-info to /home/catherine-maglione/yolo_home/install/me495_yolo/lib/python3.12/site-packages/me495_yolo-0.0.0-py3.12.egg-info
+[0.709s] running install_scripts
+[0.779s] Installing waypoint script to /home/catherine-maglione/yolo_home/install/me495_yolo/lib/me495_yolo
+[0.779s] Installing waypoint_follower script to /home/catherine-maglione/yolo_home/install/me495_yolo/lib/me495_yolo
+[0.779s] Installing yolo script to /home/catherine-maglione/yolo_home/install/me495_yolo/lib/me495_yolo
+[0.780s] writing list of installed files to '/home/catherine-maglione/yolo_home/build/me495_yolo/install.log'
+[0.791s] Invoked command in '/home/catherine-maglione/yolo_home/src/me495_yolo' returned '0': AMENT_PREFIX_PATH=/home/catherine-maglione/yolo_home/install/nuturtlebot_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/catherine-maglione/yolo_home/install/nuturtlebot_msgs:${CMAKE_PREFIX_PATH} LD_LIBRARY_PATH=/home/catherine-maglione/yolo_home/install/nuturtlebot_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/catherine-maglione/yolo_home/build/me495_yolo/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/catherine-maglione/yolo_home/install/me495_yolo/lib/python3.12/site-packages:/home/catherine-maglione/yolo_home/install/nuturtlebot_msgs/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../../build/me495_yolo build --build-base /home/catherine-maglione/yolo_home/build/me495_yolo/build install --record /home/catherine-maglione/yolo_home/build/me495_yolo/install.log --single-version-externally-managed install_data

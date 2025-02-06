@@ -1,0 +1,257 @@
+-- The C compiler identification is GNU 13.2.0
+-- The CXX compiler identification is GNU 13.2.0
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Check for working C compiler: /usr/bin/cc - skipped
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: /usr/bin/c++ - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Found ament_cmake: 2.5.2 (/opt/ros/jazzy/share/ament_cmake/cmake)
+-- Found Python3: /usr/bin/python3 (found version "3.12.3") found components: Interpreter 
+-- Found builtin_interfaces: 2.0.2 (/opt/ros/jazzy/share/builtin_interfaces/cmake)
+-- Found rosidl_generator_c: 4.6.3 (/opt/ros/jazzy/share/rosidl_generator_c/cmake)
+-- Found rosidl_generator_cpp: 4.6.3 (/opt/ros/jazzy/share/rosidl_generator_cpp/cmake)
+-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+-- Found rosidl_default_generators: 1.6.0 (/opt/ros/jazzy/share/rosidl_default_generators/cmake)
+-- Found rosidl_adapter: 4.6.3 (/opt/ros/jazzy/share/rosidl_adapter/cmake)
+-- Found ament_cmake_ros: 0.12.0 (/opt/ros/jazzy/share/ament_cmake_ros/cmake)
+-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+-- Found python_cmake_module: 0.11.1 (/opt/ros/jazzy/share/python_cmake_module/cmake)
+-- Found PythonExtra: /usr/bin/python3  
+-- Found Python3: /usr/bin/python3 (found version "3.12.3") found components: Interpreter Development NumPy Development.Module Development.Embed 
+-- Configuring done (2.3s)
+-- Generating done (0.0s)
+-- Build files have been written to: /home/catherine-maglione/yolo_home/build/nuturtlebot_msgs
+[  2%] [34m[1mGenerating type hashes for ROS interfaces[0m
+[  2%] Built target ament_cmake_python_copy_nuturtlebot_msgs
+running egg_info
+creating nuturtlebot_msgs.egg-info
+[  2%] Built target nuturtlebot_msgs__rosidl_generator_type_description
+[  4%] [34m[1mGenerating C code for ROS interfaces[0m
+writing nuturtlebot_msgs.egg-info/PKG-INFO
+writing dependency_links to nuturtlebot_msgs.egg-info/dependency_links.txt
+writing top-level names to nuturtlebot_msgs.egg-info/top_level.txt
+writing manifest file 'nuturtlebot_msgs.egg-info/SOURCES.txt'
+[  6%] [34m[1mGenerating C++ code for ROS interfaces[0m
+reading manifest file 'nuturtlebot_msgs.egg-info/SOURCES.txt'
+writing manifest file 'nuturtlebot_msgs.egg-info/SOURCES.txt'
+[  6%] Built target ament_cmake_python_build_nuturtlebot_msgs_egg
+[  6%] Built target nuturtlebot_msgs__cpp
+[  9%] [32mBuilding C object CMakeFiles/nuturtlebot_msgs__rosidl_generator_c.dir/rosidl_generator_c/nuturtlebot_msgs/msg/detail/sensor_data__type_support.c.o[0m
+[ 11%] [32mBuilding C object CMakeFiles/nuturtlebot_msgs__rosidl_generator_c.dir/rosidl_generator_c/nuturtlebot_msgs/msg/detail/wheel_commands__functions.c.o[0m
+[ 13%] [32mBuilding C object CMakeFiles/nuturtlebot_msgs__rosidl_generator_c.dir/rosidl_generator_c/nuturtlebot_msgs/msg/detail/sensor_data__description.c.o[0m
+[ 15%] [32mBuilding C object CMakeFiles/nuturtlebot_msgs__rosidl_generator_c.dir/rosidl_generator_c/nuturtlebot_msgs/msg/detail/sensor_data__functions.c.o[0m
+[ 20%] [32mBuilding C object CMakeFiles/nuturtlebot_msgs__rosidl_generator_c.dir/rosidl_generator_c/nuturtlebot_msgs/msg/detail/wheel_commands__type_support.c.o[0m
+[ 20%] [32mBuilding C object CMakeFiles/nuturtlebot_msgs__rosidl_generator_c.dir/rosidl_generator_c/nuturtlebot_msgs/msg/detail/wheel_commands__description.c.o[0m
+[ 22%] [32m[1mLinking C shared library libnuturtlebot_msgs__rosidl_generator_c.so[0m
+[ 22%] Built target nuturtlebot_msgs__rosidl_generator_c
+[ 25%] [34m[1mGenerating C type support for eProsima Fast-RTPS[0m
+[ 27%] [34m[1mGenerating C++ type support dispatch for ROS interfaces[0m
+[ 29%] [34m[1mGenerating C++ introspection for ROS interfaces[0m
+[ 31%] [34m[1mGenerating C introspection for ROS interfaces[0m
+[ 34%] [34m[1mGenerating C type support dispatch for ROS interfaces[0m
+[ 36%] [34m[1mGenerating C++ type support for eProsima Fast-RTPS[0m
+[ 38%] [32mBuilding CXX object CMakeFiles/nuturtlebot_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/nuturtlebot_msgs/msg/wheel_commands__type_support.cpp.o[0m
+[ 40%] [32mBuilding CXX object CMakeFiles/nuturtlebot_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/nuturtlebot_msgs/msg/sensor_data__type_support.cpp.o[0m
+[ 45%] [32mBuilding CXX object CMakeFiles/nuturtlebot_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/nuturtlebot_msgs/msg/wheel_commands__type_support.cpp.o[0m
+[ 45%] [32mBuilding CXX object CMakeFiles/nuturtlebot_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/nuturtlebot_msgs/msg/sensor_data__type_support.cpp.o[0m
+[ 50%] [32mBuilding CXX object CMakeFiles/nuturtlebot_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/nuturtlebot_msgs/msg/detail/sensor_data__type_support.cpp.o[0m
+[ 50%] [32mBuilding CXX object CMakeFiles/nuturtlebot_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/nuturtlebot_msgs/msg/detail/wheel_commands__type_support.cpp.o[0m
+[ 52%] [32mBuilding C object CMakeFiles/nuturtlebot_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/nuturtlebot_msgs/msg/detail/wheel_commands__type_support.c.o[0m
+[ 54%] [32mBuilding C object CMakeFiles/nuturtlebot_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/nuturtlebot_msgs/msg/detail/sensor_data__type_support.c.o[0m
+[ 56%] [32mBuilding CXX object CMakeFiles/nuturtlebot_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/nuturtlebot_msgs/msg/detail/wheel_commands__type_support_c.cpp.o[0m
+[ 59%] [32mBuilding CXX object CMakeFiles/nuturtlebot_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/nuturtlebot_msgs/msg/detail/dds_fastrtps/wheel_commands__type_support.cpp.o[0m
+[ 61%] [32mBuilding CXX object CMakeFiles/nuturtlebot_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/nuturtlebot_msgs/msg/detail/sensor_data__type_support_c.cpp.o[0m
+[ 63%] [32mBuilding CXX object CMakeFiles/nuturtlebot_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/nuturtlebot_msgs/msg/detail/dds_fastrtps/sensor_data__type_support.cpp.o[0m
+[ 65%] [32m[1mLinking CXX shared library libnuturtlebot_msgs__rosidl_typesupport_c.so[0m
+[ 68%] [32m[1mLinking C shared library libnuturtlebot_msgs__rosidl_typesupport_introspection_c.so[0m
+[ 68%] Built target nuturtlebot_msgs__rosidl_typesupport_c
+[ 68%] Built target nuturtlebot_msgs__rosidl_typesupport_introspection_c
+[ 70%] [32m[1mLinking CXX shared library libnuturtlebot_msgs__rosidl_typesupport_introspection_cpp.so[0m
+[ 72%] [32m[1mLinking CXX shared library libnuturtlebot_msgs__rosidl_typesupport_cpp.so[0m
+[ 72%] Built target nuturtlebot_msgs__rosidl_typesupport_introspection_cpp
+[ 72%] Built target nuturtlebot_msgs__rosidl_typesupport_cpp
+[ 75%] [32m[1mLinking CXX shared library libnuturtlebot_msgs__rosidl_typesupport_fastrtps_cpp.so[0m
+[ 77%] [32m[1mLinking CXX shared library libnuturtlebot_msgs__rosidl_typesupport_fastrtps_c.so[0m
+[ 77%] Built target nuturtlebot_msgs__rosidl_typesupport_fastrtps_cpp
+[ 77%] Built target nuturtlebot_msgs__rosidl_typesupport_fastrtps_c
+[ 77%] Built target nuturtlebot_msgs
+[ 79%] [34m[1mGenerating Python code for ROS interfaces[0m
+[ 79%] Built target nuturtlebot_msgs__py
+[ 81%] [32mBuilding C object CMakeFiles/nuturtlebot_msgs__rosidl_generator_py.dir/rosidl_generator_py/nuturtlebot_msgs/msg/_sensor_data_s.c.o[0m
+[ 84%] [32mBuilding C object CMakeFiles/nuturtlebot_msgs__rosidl_generator_py.dir/rosidl_generator_py/nuturtlebot_msgs/msg/_wheel_commands_s.c.o[0m
+[ 86%] [32m[1mLinking C shared library libnuturtlebot_msgs__rosidl_generator_py.so[0m
+[ 86%] Built target nuturtlebot_msgs__rosidl_generator_py
+[ 90%] [32mBuilding C object CMakeFiles/nuturtlebot_msgs_s__rosidl_typesupport_introspection_c.dir/rosidl_generator_py/nuturtlebot_msgs/_nuturtlebot_msgs_s.ep.rosidl_typesupport_introspection_c.c.o[0m
+[ 90%] [32mBuilding C object CMakeFiles/nuturtlebot_msgs_s__rosidl_typesupport_c.dir/rosidl_generator_py/nuturtlebot_msgs/_nuturtlebot_msgs_s.ep.rosidl_typesupport_c.c.o[0m
+[ 93%] [32mBuilding C object CMakeFiles/nuturtlebot_msgs_s__rosidl_typesupport_fastrtps_c.dir/rosidl_generator_py/nuturtlebot_msgs/_nuturtlebot_msgs_s.ep.rosidl_typesupport_fastrtps_c.c.o[0m
+[ 95%] [32m[1mLinking C shared module rosidl_generator_py/nuturtlebot_msgs/nuturtlebot_msgs_s__rosidl_typesupport_c.so[0m
+[ 97%] [32m[1mLinking C shared module rosidl_generator_py/nuturtlebot_msgs/nuturtlebot_msgs_s__rosidl_typesupport_fastrtps_c.so[0m
+[100%] [32m[1mLinking C shared module rosidl_generator_py/nuturtlebot_msgs/nuturtlebot_msgs_s__rosidl_typesupport_introspection_c.so[0m
+[100%] Built target nuturtlebot_msgs_s__rosidl_typesupport_fastrtps_c
+[100%] Built target nuturtlebot_msgs_s__rosidl_typesupport_c
+[100%] Built target nuturtlebot_msgs_s__rosidl_typesupport_introspection_c
+-- Install configuration: ""
+-- Installing: /home/catherine-maglione/yolo_home/install/nuturtlebot_msgs/share/ament_index/resource_index/rosidl_interfaces/nuturtlebot_msgs
+-- Installing: /home/catherine-maglione/yolo_home/install/nuturtlebot_msgs/share/nuturtlebot_msgs/msg/SensorData.json
+-- Installing: /home/catherine-maglione/yolo_home/install/nuturtlebot_msgs/share/nuturtlebot_msgs/msg/WheelCommands.json
+-- Installing: /home/catherine-maglione/yolo_home/install/nuturtlebot_msgs/include/nuturtlebot_msgs/nuturtlebot_msgs
+-- Installing: /home/catherine-maglione/yolo_home/install/nuturtlebot_msgs/include/nuturtlebot_msgs/nuturtlebot_msgs/msg
+-- Installing: /home/catherine-maglione/yolo_home/install/nuturtlebot_msgs/include/nuturtlebot_msgs/nuturtlebot_msgs/msg/rosidl_generator_c__visibility_control.h
+-- Installing: /home/catherine-maglione/yolo_home/install/nuturtlebot_msgs/include/nuturtlebot_msgs/nuturtlebot_msgs/msg/detail
+-- Installing: /home/catherine-maglione/yolo_home/install/nuturtlebot_msgs/include/nuturtlebot_msgs/nuturtlebot_msgs/msg/detail/sensor_data__type_support.c
+-- Installing: /home/catherine-maglione/yolo_home/install/nuturtlebot_msgs/include/nuturtlebot_msgs/nuturtlebot_msgs/msg/detail/sensor_data__struct.h
+-- Installing: /home/catherine-maglione/yolo_home/install/nuturtlebot_msgs/include/nuturtlebot_msgs/nuturtlebot_msgs/msg/detail/sensor_data__description.c
+-- Installing: /home/catherine-maglione/yolo_home/install/nuturtlebot_msgs/include/nuturtlebot_msgs/nuturtlebot_msgs/msg/detail/wheel_commands__type_support.c
+-- Installing: /home/catherine-maglione/yolo_home/install/nuturtlebot_msgs/include/nuturtlebot_msgs/nuturtlebot_msgs/msg/detail/sensor_data__functions.c
+-- Installing: /home/catherine-maglione/yolo_home/install/nuturtlebot_msgs/include/nuturtlebot_msgs/nuturtlebot_msgs/msg/detail/wheel_commands__functions.h
+-- Installing: /home/catherine-maglione/yolo_home/install/nuturtlebot_msgs/include/nuturtlebot_msgs/nuturtlebot_msgs/msg/detail/sensor_data__functions.h
+-- Installing: /home/catherine-maglione/yolo_home/install/nuturtlebot_msgs/include/nuturtlebot_msgs/nuturtlebot_msgs/msg/detail/wheel_commands__description.c
+-- Installing: /home/catherine-maglione/yolo_home/install/nuturtlebot_msgs/include/nuturtlebot_msgs/nuturtlebot_msgs/msg/detail/wheel_commands__struct.h
+-- Installing: /home/catherine-maglione/yolo_home/install/nuturtlebot_msgs/include/nuturtlebot_msgs/nuturtlebot_msgs/msg/detail/sensor_data__type_support.h
+-- Installing: /home/catherine-maglione/yolo_home/install/nuturtlebot_msgs/include/nuturtlebot_msgs/nuturtlebot_msgs/msg/detail/wheel_commands__type_support.h
+-- Installing: /home/catherine-maglione/yolo_home/install/nuturtlebot_msgs/include/nuturtlebot_msgs/nuturtlebot_msgs/msg/detail/wheel_commands__functions.c
+-- Installing: /home/catherine-maglione/yolo_home/install/nuturtlebot_msgs/include/nuturtlebot_msgs/nuturtlebot_msgs/msg/sensor_data.h
+-- Installing: /home/catherine-maglione/yolo_home/install/nuturtlebot_msgs/include/nuturtlebot_msgs/nuturtlebot_msgs/msg/wheel_commands.h
+-- Installing: /home/catherine-maglione/yolo_home/install/nuturtlebot_msgs/share/nuturtlebot_msgs/environment/library_path.sh
+-- Installing: /home/catherine-maglione/yolo_home/install/nuturtlebot_msgs/share/nuturtlebot_msgs/environment/library_path.dsv
+-- Installing: /home/catherine-maglione/yolo_home/install/nuturtlebot_msgs/lib/libnuturtlebot_msgs__rosidl_generator_c.so
+-- Set non-toolchain portion of runtime path of "/home/catherine-maglione/yolo_home/install/nuturtlebot_msgs/lib/libnuturtlebot_msgs__rosidl_generator_c.so" to ""
+-- Up-to-date: /home/catherine-maglione/yolo_home/install/nuturtlebot_msgs/include/nuturtlebot_msgs/nuturtlebot_msgs
+-- Up-to-date: /home/catherine-maglione/yolo_home/install/nuturtlebot_msgs/include/nuturtlebot_msgs/nuturtlebot_msgs/msg
+-- Up-to-date: /home/catherine-maglione/yolo_home/install/nuturtlebot_msgs/include/nuturtlebot_msgs/nuturtlebot_msgs/msg/detail
+-- Installing: /home/catherine-maglione/yolo_home/install/nuturtlebot_msgs/include/nuturtlebot_msgs/nuturtlebot_msgs/msg/detail/wheel_commands__rosidl_typesupport_fastrtps_c.h
+-- Installing: /home/catherine-maglione/yolo_home/install/nuturtlebot_msgs/include/nuturtlebot_msgs/nuturtlebot_msgs/msg/detail/sensor_data__rosidl_typesupport_fastrtps_c.h
+-- Installing: /home/catherine-maglione/yolo_home/install/nuturtlebot_msgs/include/nuturtlebot_msgs/nuturtlebot_msgs/msg/rosidl_typesupport_fastrtps_c__visibility_control.h
+-- Installing: /home/catherine-maglione/yolo_home/install/nuturtlebot_msgs/lib/libnuturtlebot_msgs__rosidl_typesupport_fastrtps_c.so
+-- Set non-toolchain portion of runtime path of "/home/catherine-maglione/yolo_home/install/nuturtlebot_msgs/lib/libnuturtlebot_msgs__rosidl_typesupport_fastrtps_c.so" to ""
+-- Up-to-date: /home/catherine-maglione/yolo_home/install/nuturtlebot_msgs/include/nuturtlebot_msgs/nuturtlebot_msgs
+-- Up-to-date: /home/catherine-maglione/yolo_home/install/nuturtlebot_msgs/include/nuturtlebot_msgs/nuturtlebot_msgs/msg
+-- Up-to-date: /home/catherine-maglione/yolo_home/install/nuturtlebot_msgs/include/nuturtlebot_msgs/nuturtlebot_msgs/msg/detail
+-- Installing: /home/catherine-maglione/yolo_home/install/nuturtlebot_msgs/include/nuturtlebot_msgs/nuturtlebot_msgs/msg/detail/wheel_commands__type_support.hpp
+-- Installing: /home/catherine-maglione/yolo_home/install/nuturtlebot_msgs/include/nuturtlebot_msgs/nuturtlebot_msgs/msg/detail/wheel_commands__builder.hpp
+-- Installing: /home/catherine-maglione/yolo_home/install/nuturtlebot_msgs/include/nuturtlebot_msgs/nuturtlebot_msgs/msg/detail/sensor_data__traits.hpp
+-- Installing: /home/catherine-maglione/yolo_home/install/nuturtlebot_msgs/include/nuturtlebot_msgs/nuturtlebot_msgs/msg/detail/sensor_data__type_support.hpp
+-- Installing: /home/catherine-maglione/yolo_home/install/nuturtlebot_msgs/include/nuturtlebot_msgs/nuturtlebot_msgs/msg/detail/wheel_commands__struct.hpp
+-- Installing: /home/catherine-maglione/yolo_home/install/nuturtlebot_msgs/include/nuturtlebot_msgs/nuturtlebot_msgs/msg/detail/wheel_commands__traits.hpp
+-- Installing: /home/catherine-maglione/yolo_home/install/nuturtlebot_msgs/include/nuturtlebot_msgs/nuturtlebot_msgs/msg/detail/sensor_data__struct.hpp
+-- Installing: /home/catherine-maglione/yolo_home/install/nuturtlebot_msgs/include/nuturtlebot_msgs/nuturtlebot_msgs/msg/detail/sensor_data__builder.hpp
+-- Installing: /home/catherine-maglione/yolo_home/install/nuturtlebot_msgs/include/nuturtlebot_msgs/nuturtlebot_msgs/msg/rosidl_generator_cpp__visibility_control.hpp
+-- Installing: /home/catherine-maglione/yolo_home/install/nuturtlebot_msgs/include/nuturtlebot_msgs/nuturtlebot_msgs/msg/wheel_commands.hpp
+-- Installing: /home/catherine-maglione/yolo_home/install/nuturtlebot_msgs/include/nuturtlebot_msgs/nuturtlebot_msgs/msg/sensor_data.hpp
+-- Up-to-date: /home/catherine-maglione/yolo_home/install/nuturtlebot_msgs/include/nuturtlebot_msgs/nuturtlebot_msgs
+-- Up-to-date: /home/catherine-maglione/yolo_home/install/nuturtlebot_msgs/include/nuturtlebot_msgs/nuturtlebot_msgs/msg
+-- Up-to-date: /home/catherine-maglione/yolo_home/install/nuturtlebot_msgs/include/nuturtlebot_msgs/nuturtlebot_msgs/msg/detail
+-- Installing: /home/catherine-maglione/yolo_home/install/nuturtlebot_msgs/include/nuturtlebot_msgs/nuturtlebot_msgs/msg/detail/dds_fastrtps
+-- Installing: /home/catherine-maglione/yolo_home/install/nuturtlebot_msgs/include/nuturtlebot_msgs/nuturtlebot_msgs/msg/detail/wheel_commands__rosidl_typesupport_fastrtps_cpp.hpp
+-- Installing: /home/catherine-maglione/yolo_home/install/nuturtlebot_msgs/include/nuturtlebot_msgs/nuturtlebot_msgs/msg/detail/sensor_data__rosidl_typesupport_fastrtps_cpp.hpp
+-- Installing: /home/catherine-maglione/yolo_home/install/nuturtlebot_msgs/include/nuturtlebot_msgs/nuturtlebot_msgs/msg/rosidl_typesupport_fastrtps_cpp__visibility_control.h
+-- Installing: /home/catherine-maglione/yolo_home/install/nuturtlebot_msgs/lib/libnuturtlebot_msgs__rosidl_typesupport_fastrtps_cpp.so
+-- Set non-toolchain portion of runtime path of "/home/catherine-maglione/yolo_home/install/nuturtlebot_msgs/lib/libnuturtlebot_msgs__rosidl_typesupport_fastrtps_cpp.so" to ""
+-- Up-to-date: /home/catherine-maglione/yolo_home/install/nuturtlebot_msgs/include/nuturtlebot_msgs/nuturtlebot_msgs
+-- Up-to-date: /home/catherine-maglione/yolo_home/install/nuturtlebot_msgs/include/nuturtlebot_msgs/nuturtlebot_msgs/msg
+-- Up-to-date: /home/catherine-maglione/yolo_home/install/nuturtlebot_msgs/include/nuturtlebot_msgs/nuturtlebot_msgs/msg/detail
+-- Up-to-date: /home/catherine-maglione/yolo_home/install/nuturtlebot_msgs/include/nuturtlebot_msgs/nuturtlebot_msgs/msg/detail/sensor_data__type_support.c
+-- Up-to-date: /home/catherine-maglione/yolo_home/install/nuturtlebot_msgs/include/nuturtlebot_msgs/nuturtlebot_msgs/msg/detail/wheel_commands__type_support.c
+-- Installing: /home/catherine-maglione/yolo_home/install/nuturtlebot_msgs/include/nuturtlebot_msgs/nuturtlebot_msgs/msg/detail/sensor_data__rosidl_typesupport_introspection_c.h
+-- Installing: /home/catherine-maglione/yolo_home/install/nuturtlebot_msgs/include/nuturtlebot_msgs/nuturtlebot_msgs/msg/detail/wheel_commands__rosidl_typesupport_introspection_c.h
+-- Installing: /home/catherine-maglione/yolo_home/install/nuturtlebot_msgs/include/nuturtlebot_msgs/nuturtlebot_msgs/msg/rosidl_typesupport_introspection_c__visibility_control.h
+-- Installing: /home/catherine-maglione/yolo_home/install/nuturtlebot_msgs/lib/libnuturtlebot_msgs__rosidl_typesupport_introspection_c.so
+-- Set non-toolchain portion of runtime path of "/home/catherine-maglione/yolo_home/install/nuturtlebot_msgs/lib/libnuturtlebot_msgs__rosidl_typesupport_introspection_c.so" to ""
+-- Installing: /home/catherine-maglione/yolo_home/install/nuturtlebot_msgs/lib/libnuturtlebot_msgs__rosidl_typesupport_c.so
+-- Set non-toolchain portion of runtime path of "/home/catherine-maglione/yolo_home/install/nuturtlebot_msgs/lib/libnuturtlebot_msgs__rosidl_typesupport_c.so" to ""
+-- Up-to-date: /home/catherine-maglione/yolo_home/install/nuturtlebot_msgs/include/nuturtlebot_msgs/nuturtlebot_msgs
+-- Up-to-date: /home/catherine-maglione/yolo_home/install/nuturtlebot_msgs/include/nuturtlebot_msgs/nuturtlebot_msgs/msg
+-- Up-to-date: /home/catherine-maglione/yolo_home/install/nuturtlebot_msgs/include/nuturtlebot_msgs/nuturtlebot_msgs/msg/detail
+-- Installing: /home/catherine-maglione/yolo_home/install/nuturtlebot_msgs/include/nuturtlebot_msgs/nuturtlebot_msgs/msg/detail/wheel_commands__type_support.cpp
+-- Installing: /home/catherine-maglione/yolo_home/install/nuturtlebot_msgs/include/nuturtlebot_msgs/nuturtlebot_msgs/msg/detail/sensor_data__rosidl_typesupport_introspection_cpp.hpp
+-- Installing: /home/catherine-maglione/yolo_home/install/nuturtlebot_msgs/include/nuturtlebot_msgs/nuturtlebot_msgs/msg/detail/wheel_commands__rosidl_typesupport_introspection_cpp.hpp
+-- Installing: /home/catherine-maglione/yolo_home/install/nuturtlebot_msgs/include/nuturtlebot_msgs/nuturtlebot_msgs/msg/detail/sensor_data__type_support.cpp
+-- Installing: /home/catherine-maglione/yolo_home/install/nuturtlebot_msgs/lib/libnuturtlebot_msgs__rosidl_typesupport_introspection_cpp.so
+-- Set non-toolchain portion of runtime path of "/home/catherine-maglione/yolo_home/install/nuturtlebot_msgs/lib/libnuturtlebot_msgs__rosidl_typesupport_introspection_cpp.so" to ""
+-- Installing: /home/catherine-maglione/yolo_home/install/nuturtlebot_msgs/lib/libnuturtlebot_msgs__rosidl_typesupport_cpp.so
+-- Set non-toolchain portion of runtime path of "/home/catherine-maglione/yolo_home/install/nuturtlebot_msgs/lib/libnuturtlebot_msgs__rosidl_typesupport_cpp.so" to ""
+-- Installing: /home/catherine-maglione/yolo_home/install/nuturtlebot_msgs/share/nuturtlebot_msgs/environment/pythonpath.sh
+-- Installing: /home/catherine-maglione/yolo_home/install/nuturtlebot_msgs/share/nuturtlebot_msgs/environment/pythonpath.dsv
+-- Installing: /home/catherine-maglione/yolo_home/install/nuturtlebot_msgs/lib/python3.12/site-packages/nuturtlebot_msgs-0.0.2-py3.12.egg-info
+-- Installing: /home/catherine-maglione/yolo_home/install/nuturtlebot_msgs/lib/python3.12/site-packages/nuturtlebot_msgs-0.0.2-py3.12.egg-info/SOURCES.txt
+-- Installing: /home/catherine-maglione/yolo_home/install/nuturtlebot_msgs/lib/python3.12/site-packages/nuturtlebot_msgs-0.0.2-py3.12.egg-info/dependency_links.txt
+-- Installing: /home/catherine-maglione/yolo_home/install/nuturtlebot_msgs/lib/python3.12/site-packages/nuturtlebot_msgs-0.0.2-py3.12.egg-info/PKG-INFO
+-- Installing: /home/catherine-maglione/yolo_home/install/nuturtlebot_msgs/lib/python3.12/site-packages/nuturtlebot_msgs-0.0.2-py3.12.egg-info/top_level.txt
+-- Installing: /home/catherine-maglione/yolo_home/install/nuturtlebot_msgs/lib/python3.12/site-packages/nuturtlebot_msgs
+-- Installing: /home/catherine-maglione/yolo_home/install/nuturtlebot_msgs/lib/python3.12/site-packages/nuturtlebot_msgs/_nuturtlebot_msgs_s.ep.rosidl_typesupport_c.c
+-- Installing: /home/catherine-maglione/yolo_home/install/nuturtlebot_msgs/lib/python3.12/site-packages/nuturtlebot_msgs/msg
+-- Installing: /home/catherine-maglione/yolo_home/install/nuturtlebot_msgs/lib/python3.12/site-packages/nuturtlebot_msgs/msg/_sensor_data.py
+-- Installing: /home/catherine-maglione/yolo_home/install/nuturtlebot_msgs/lib/python3.12/site-packages/nuturtlebot_msgs/msg/_wheel_commands_s.c
+-- Installing: /home/catherine-maglione/yolo_home/install/nuturtlebot_msgs/lib/python3.12/site-packages/nuturtlebot_msgs/msg/_wheel_commands.py
+-- Installing: /home/catherine-maglione/yolo_home/install/nuturtlebot_msgs/lib/python3.12/site-packages/nuturtlebot_msgs/msg/_sensor_data_s.c
+-- Installing: /home/catherine-maglione/yolo_home/install/nuturtlebot_msgs/lib/python3.12/site-packages/nuturtlebot_msgs/msg/__init__.py
+-- Installing: /home/catherine-maglione/yolo_home/install/nuturtlebot_msgs/lib/python3.12/site-packages/nuturtlebot_msgs/nuturtlebot_msgs_s__rosidl_typesupport_c.so
+-- Installing: /home/catherine-maglione/yolo_home/install/nuturtlebot_msgs/lib/python3.12/site-packages/nuturtlebot_msgs/nuturtlebot_msgs_s__rosidl_typesupport_introspection_c.so
+-- Installing: /home/catherine-maglione/yolo_home/install/nuturtlebot_msgs/lib/python3.12/site-packages/nuturtlebot_msgs/nuturtlebot_msgs_s__rosidl_typesupport_fastrtps_c.so
+-- Installing: /home/catherine-maglione/yolo_home/install/nuturtlebot_msgs/lib/python3.12/site-packages/nuturtlebot_msgs/_nuturtlebot_msgs_s.ep.rosidl_typesupport_introspection_c.c
+-- Installing: /home/catherine-maglione/yolo_home/install/nuturtlebot_msgs/lib/python3.12/site-packages/nuturtlebot_msgs/__init__.py
+-- Installing: /home/catherine-maglione/yolo_home/install/nuturtlebot_msgs/lib/python3.12/site-packages/nuturtlebot_msgs/_nuturtlebot_msgs_s.ep.rosidl_typesupport_fastrtps_c.c
+Listing '/home/catherine-maglione/yolo_home/install/nuturtlebot_msgs/lib/python3.12/site-packages/nuturtlebot_msgs'...
+Compiling '/home/catherine-maglione/yolo_home/install/nuturtlebot_msgs/lib/python3.12/site-packages/nuturtlebot_msgs/__init__.py'...
+Listing '/home/catherine-maglione/yolo_home/install/nuturtlebot_msgs/lib/python3.12/site-packages/nuturtlebot_msgs/msg'...
+Compiling '/home/catherine-maglione/yolo_home/install/nuturtlebot_msgs/lib/python3.12/site-packages/nuturtlebot_msgs/msg/__init__.py'...
+Compiling '/home/catherine-maglione/yolo_home/install/nuturtlebot_msgs/lib/python3.12/site-packages/nuturtlebot_msgs/msg/_sensor_data.py'...
+Compiling '/home/catherine-maglione/yolo_home/install/nuturtlebot_msgs/lib/python3.12/site-packages/nuturtlebot_msgs/msg/_wheel_commands.py'...
+-- Installing: /home/catherine-maglione/yolo_home/install/nuturtlebot_msgs/lib/python3.12/site-packages/nuturtlebot_msgs/nuturtlebot_msgs_s__rosidl_typesupport_fastrtps_c.so
+-- Set non-toolchain portion of runtime path of "/home/catherine-maglione/yolo_home/install/nuturtlebot_msgs/lib/python3.12/site-packages/nuturtlebot_msgs/nuturtlebot_msgs_s__rosidl_typesupport_fastrtps_c.so" to ""
+-- Installing: /home/catherine-maglione/yolo_home/install/nuturtlebot_msgs/lib/python3.12/site-packages/nuturtlebot_msgs/nuturtlebot_msgs_s__rosidl_typesupport_introspection_c.so
+-- Set non-toolchain portion of runtime path of "/home/catherine-maglione/yolo_home/install/nuturtlebot_msgs/lib/python3.12/site-packages/nuturtlebot_msgs/nuturtlebot_msgs_s__rosidl_typesupport_introspection_c.so" to ""
+-- Installing: /home/catherine-maglione/yolo_home/install/nuturtlebot_msgs/lib/python3.12/site-packages/nuturtlebot_msgs/nuturtlebot_msgs_s__rosidl_typesupport_c.so
+-- Set non-toolchain portion of runtime path of "/home/catherine-maglione/yolo_home/install/nuturtlebot_msgs/lib/python3.12/site-packages/nuturtlebot_msgs/nuturtlebot_msgs_s__rosidl_typesupport_c.so" to ""
+-- Installing: /home/catherine-maglione/yolo_home/install/nuturtlebot_msgs/lib/libnuturtlebot_msgs__rosidl_generator_py.so
+-- Set non-toolchain portion of runtime path of "/home/catherine-maglione/yolo_home/install/nuturtlebot_msgs/lib/libnuturtlebot_msgs__rosidl_generator_py.so" to ""
+-- Installing: /home/catherine-maglione/yolo_home/install/nuturtlebot_msgs/share/nuturtlebot_msgs/msg/SensorData.idl
+-- Installing: /home/catherine-maglione/yolo_home/install/nuturtlebot_msgs/share/nuturtlebot_msgs/msg/WheelCommands.idl
+-- Installing: /home/catherine-maglione/yolo_home/install/nuturtlebot_msgs/share/nuturtlebot_msgs/msg/SensorData.msg
+-- Installing: /home/catherine-maglione/yolo_home/install/nuturtlebot_msgs/share/nuturtlebot_msgs/msg/WheelCommands.msg
+-- Installing: /home/catherine-maglione/yolo_home/install/nuturtlebot_msgs/share/ament_index/resource_index/package_run_dependencies/nuturtlebot_msgs
+-- Installing: /home/catherine-maglione/yolo_home/install/nuturtlebot_msgs/share/ament_index/resource_index/parent_prefix_path/nuturtlebot_msgs
+-- Installing: /home/catherine-maglione/yolo_home/install/nuturtlebot_msgs/share/nuturtlebot_msgs/environment/ament_prefix_path.sh
+-- Installing: /home/catherine-maglione/yolo_home/install/nuturtlebot_msgs/share/nuturtlebot_msgs/environment/ament_prefix_path.dsv
+-- Installing: /home/catherine-maglione/yolo_home/install/nuturtlebot_msgs/share/nuturtlebot_msgs/environment/path.sh
+-- Installing: /home/catherine-maglione/yolo_home/install/nuturtlebot_msgs/share/nuturtlebot_msgs/environment/path.dsv
+-- Installing: /home/catherine-maglione/yolo_home/install/nuturtlebot_msgs/share/nuturtlebot_msgs/local_setup.bash
+-- Installing: /home/catherine-maglione/yolo_home/install/nuturtlebot_msgs/share/nuturtlebot_msgs/local_setup.sh
+-- Installing: /home/catherine-maglione/yolo_home/install/nuturtlebot_msgs/share/nuturtlebot_msgs/local_setup.zsh
+-- Installing: /home/catherine-maglione/yolo_home/install/nuturtlebot_msgs/share/nuturtlebot_msgs/local_setup.dsv
+-- Installing: /home/catherine-maglione/yolo_home/install/nuturtlebot_msgs/share/nuturtlebot_msgs/package.dsv
+-- Installing: /home/catherine-maglione/yolo_home/install/nuturtlebot_msgs/share/ament_index/resource_index/packages/nuturtlebot_msgs
+-- Installing: /home/catherine-maglione/yolo_home/install/nuturtlebot_msgs/share/nuturtlebot_msgs/cmake/export_nuturtlebot_msgs__rosidl_generator_cExport.cmake
+-- Installing: /home/catherine-maglione/yolo_home/install/nuturtlebot_msgs/share/nuturtlebot_msgs/cmake/export_nuturtlebot_msgs__rosidl_generator_cExport-noconfig.cmake
+-- Installing: /home/catherine-maglione/yolo_home/install/nuturtlebot_msgs/share/nuturtlebot_msgs/cmake/export_nuturtlebot_msgs__rosidl_typesupport_fastrtps_cExport.cmake
+-- Installing: /home/catherine-maglione/yolo_home/install/nuturtlebot_msgs/share/nuturtlebot_msgs/cmake/export_nuturtlebot_msgs__rosidl_typesupport_fastrtps_cExport-noconfig.cmake
+-- Installing: /home/catherine-maglione/yolo_home/install/nuturtlebot_msgs/share/nuturtlebot_msgs/cmake/export_nuturtlebot_msgs__rosidl_generator_cppExport.cmake
+-- Installing: /home/catherine-maglione/yolo_home/install/nuturtlebot_msgs/share/nuturtlebot_msgs/cmake/export_nuturtlebot_msgs__rosidl_typesupport_fastrtps_cppExport.cmake
+-- Installing: /home/catherine-maglione/yolo_home/install/nuturtlebot_msgs/share/nuturtlebot_msgs/cmake/export_nuturtlebot_msgs__rosidl_typesupport_fastrtps_cppExport-noconfig.cmake
+-- Installing: /home/catherine-maglione/yolo_home/install/nuturtlebot_msgs/share/nuturtlebot_msgs/cmake/nuturtlebot_msgs__rosidl_typesupport_introspection_cExport.cmake
+-- Installing: /home/catherine-maglione/yolo_home/install/nuturtlebot_msgs/share/nuturtlebot_msgs/cmake/nuturtlebot_msgs__rosidl_typesupport_introspection_cExport-noconfig.cmake
+-- Installing: /home/catherine-maglione/yolo_home/install/nuturtlebot_msgs/share/nuturtlebot_msgs/cmake/nuturtlebot_msgs__rosidl_typesupport_cExport.cmake
+-- Installing: /home/catherine-maglione/yolo_home/install/nuturtlebot_msgs/share/nuturtlebot_msgs/cmake/nuturtlebot_msgs__rosidl_typesupport_cExport-noconfig.cmake
+-- Installing: /home/catherine-maglione/yolo_home/install/nuturtlebot_msgs/share/nuturtlebot_msgs/cmake/nuturtlebot_msgs__rosidl_typesupport_introspection_cppExport.cmake
+-- Installing: /home/catherine-maglione/yolo_home/install/nuturtlebot_msgs/share/nuturtlebot_msgs/cmake/nuturtlebot_msgs__rosidl_typesupport_introspection_cppExport-noconfig.cmake
+-- Installing: /home/catherine-maglione/yolo_home/install/nuturtlebot_msgs/share/nuturtlebot_msgs/cmake/nuturtlebot_msgs__rosidl_typesupport_cppExport.cmake
+-- Installing: /home/catherine-maglione/yolo_home/install/nuturtlebot_msgs/share/nuturtlebot_msgs/cmake/nuturtlebot_msgs__rosidl_typesupport_cppExport-noconfig.cmake
+-- Installing: /home/catherine-maglione/yolo_home/install/nuturtlebot_msgs/share/nuturtlebot_msgs/cmake/export_nuturtlebot_msgs__rosidl_generator_pyExport.cmake
+-- Installing: /home/catherine-maglione/yolo_home/install/nuturtlebot_msgs/share/nuturtlebot_msgs/cmake/export_nuturtlebot_msgs__rosidl_generator_pyExport-noconfig.cmake
+-- Installing: /home/catherine-maglione/yolo_home/install/nuturtlebot_msgs/share/nuturtlebot_msgs/cmake/rosidl_cmake-extras.cmake
+-- Installing: /home/catherine-maglione/yolo_home/install/nuturtlebot_msgs/share/nuturtlebot_msgs/cmake/ament_cmake_export_dependencies-extras.cmake
+-- Installing: /home/catherine-maglione/yolo_home/install/nuturtlebot_msgs/share/nuturtlebot_msgs/cmake/ament_cmake_export_include_directories-extras.cmake
+-- Installing: /home/catherine-maglione/yolo_home/install/nuturtlebot_msgs/share/nuturtlebot_msgs/cmake/ament_cmake_export_libraries-extras.cmake
+-- Installing: /home/catherine-maglione/yolo_home/install/nuturtlebot_msgs/share/nuturtlebot_msgs/cmake/ament_cmake_export_targets-extras.cmake
+-- Installing: /home/catherine-maglione/yolo_home/install/nuturtlebot_msgs/share/nuturtlebot_msgs/cmake/rosidl_cmake_export_typesupport_targets-extras.cmake
+-- Installing: /home/catherine-maglione/yolo_home/install/nuturtlebot_msgs/share/nuturtlebot_msgs/cmake/rosidl_cmake_export_typesupport_libraries-extras.cmake
+-- Installing: /home/catherine-maglione/yolo_home/install/nuturtlebot_msgs/share/nuturtlebot_msgs/cmake/nuturtlebot_msgsConfig.cmake
+-- Installing: /home/catherine-maglione/yolo_home/install/nuturtlebot_msgs/share/nuturtlebot_msgs/cmake/nuturtlebot_msgsConfig-version.cmake
+-- Installing: /home/catherine-maglione/yolo_home/install/nuturtlebot_msgs/share/nuturtlebot_msgs/package.xml
