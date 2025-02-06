@@ -569,7 +569,8 @@ class WaypointNode(Node):
             pose.header.frame_id = "turtlebot_blue_object"
             pose.pose.position.x = float(x)
             pose.pose.position.y = float(y)
-            pose.pose.position.z = float(z)
+            #pose.pose.position.z = float(z)
+            pose.pose.position.z = 0.0
             pose.pose.orientation.w = 1.0
             path_msg.poses.append(pose)
 
@@ -663,7 +664,9 @@ class WaypointNode(Node):
             pose.header.frame_id = "turtlebot_blue_object"  # ✅ Ensure frame is correct
             pose.pose.position.x = float(x)
             pose.pose.position.y = float(y)
-            pose.pose.position.z = float(z)
+            #pose.pose.position.z = float(z)
+            pose.pose.position.z = 0.0
+
             pose.pose.orientation.w = 1.0
             path_msg.poses.append(pose)
 
