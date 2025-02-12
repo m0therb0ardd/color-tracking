@@ -1,174 +1,158 @@
-# modifyin plan: i want to waypoint_follower to opublish directly to the turtlebots /wheel_cmd topic 
-# need to calcualte the appropriate left_velocity and right_velocity values based on the way points 
-# msr@shredder:~$ ros2 topic pub /wheel_cmd nuturtlebot_msgs/msg/WheelCmands "{left_velocity: 100, right_velocity: 100}"
-# building off of ths ^ 
 
-# # calculate wheel veleoctied based on distance to waypoint 
-# import rclpy
-# from rclpy.node import Node
-# from geometry_msgs.msg import Point
-# from nuturtlebot_msgs.msg import WheelCommands
-# import math
 
-# class WaypointFollower(Node):
-#     def __init__(self):
-#         super().__init__('waypoint_follower')
+# need to subscribe to /waypoints
 
-#         # Publisher for wheel commands
-#         self.wheel_cmd_publisher = self.create_publisher(WheelCommands, '/wheel_cmd', 10)
+# iterate through each waypoint (waypoints publishes a /nav_msgs/Path message)
 
-#         # Subscribe to the waypoints topic
-#         self.create_subscription(Point, '/waypoints', self.waypoint_callback, 10)
+# use /cmd_vel to convert waypoitns to velocoty commands 
 
-#         # Waypoints list and robot state
-#         self.waypoints = []
-#         self.current_x = 0.0
-#         self.current_y = 0.0
-#         self.current_theta = 0.0  # Orientation in radians
-#         self.wheel_radius = 0.033  # Wheel radius in meters (example value)
-#         self.wheel_base = 0.16    # Distance between wheels in meters (example value)
-#         self.linear_speed = 0.2   # Linear speed in m/s (example value)
-#         self.angular_speed = 1.0  # Angular speed in rad/s (example value)
+# stop when close to the waypoinf 
 
-#     def waypoint_callback(self, msg):
-#         """Callback to receive waypoints."""
-#         self.waypoints.append((msg.x, msg.y))
-#         self.get_logger().info(f"Received waypoint: ({msg.x}, {msg.y})")
+# turn towards eachj waypoint beofre movign forwards
 
-#     def follow_waypoints(self):
-#         """Follow waypoints in sequence."""
-#         for waypoint in self.waypoints:
-#             self.move_to_waypoint(waypoint[0], waypoint[1])
+# stop at last waypoint 
 
-#     def move_to_waypoint(self, goal_x, goal_y):
-#         """Move the robot to a specific waypoint."""
-#         while True:
-#             # Calculate distance and angle to the waypoint
-#             dx = goal_x - self.current_x
-#             dy = goal_y - self.current_y
-#             distance = math.sqrt(dx**2 + dy**2)
-#             target_theta = math.atan2(dy, dx)
-#             angle_diff = target_theta - self.current_theta
-
-#             # Normalize angle_diff to [-pi, pi]
-#             angle_diff = math.atan2(math.sin(angle_diff), math.cos(angle_diff))
-
-#             # Rotate the robot to face the waypoint
-#             if abs(angle_diff) > 0.1:  # Threshold for angular alignment
-#                 self.publish_wheel_commands(0.0, angle_diff * self.angular_speed)
-#                 continue
-
-#             # Move the robot forward
-#             if distance > 0.1:  # Threshold for reaching the waypoint
-#                 self.publish_wheel_commands(self.linear_speed, 0.0)
-#             else:
-#                 # Stop the robot and update its position
-#                 self.publish_wheel_commands(0.0, 0.0)
-#                 self.current_x = goal_x
-#                 self.current_y = goal_y
-#                 self.current_theta = target_theta
-#                 break
-
-#     def publish_wheel_commands(self, linear_vel, angular_vel):
-#         """Calculate wheel velocities and publish WheelCommands."""
-#         left_wheel_velocity = (linear_vel - angular_vel * self.wheel_base / 2) / self.wheel_radius
-#         right_wheel_velocity = (linear_vel + angular_vel * self.wheel_base / 2) / self.wheel_radius
-
-#         # Create and publish wheel commands
-#         wheel_cmd = WheelCommands()
-#         wheel_cmd.left_velocity = int(left_wheel_velocity)
-#         wheel_cmd.right_velocity = int(right_wheel_velocity)
-#         self.wheel_cmd_publisher.publish(wheel_cmd)
-
-# def main(args=None):
-#     rclpy.init(args=args)
-#     node = WaypointFollower()
-#     rclpy.spin(node)
-#     rclpy.shutdown()
 
 
 import rclpy
 from rclpy.node import Node
-from geometry_msgs.msg import PoseStamped
+from geometry_msgs.msg import Twist, PoseStamped
 from nav_msgs.msg import Path
-from nuturtlebot_msgs.msg import WheelCommands
 import math
-import pyrealsense2 as rs
-import cv2
+from std_msgs.msg import Float32MultiArray
 
-class WaypointFollower(Node):
+import time
+
+class TurtleBotWaypointFollower(Node):
     def __init__(self):
         super().__init__('waypoint_follower')
 
-        # Publisher for wheel commands
-        self.wheel_cmd_publisher = self.create_publisher(WheelCommands, '/wheel_cmd', 10)
+        # Subscribe to waypoints
+        self.subscription = self.create_subscription(
+            Path,
+            '/waypoints',
+            self.waypoints_callback,
+            10
+        )
+        self.create_subscription(Float32MultiArray, '/turtlebot_position', self.position_callback, 10)
 
-        # Subscribe to the waypoints topic
-        self.create_subscription(Path, '/waypoints', self.path_callback, 10)
 
-        # Waypoints and robot state
-        self.waypoints = []
-        self.current_x = 0.0
-        self.current_y = 0.0
-        self.current_theta = 0.0  # Orientation in radians
-        self.wheel_radius = 0.033  # Example value
-        self.wheel_base = 0.16    # Example value
-        self.linear_speed = 6.0   # m/s
-        self.angular_speed = 1.0  # rad/s
+        # Publisher for movement
+        self.cmd_vel_pub = self.create_publisher(Twist, '/cmd_vel', 10)
 
-        # Timer to process waypoints
-        self.timer = self.create_timer(0.1, self.follow_waypoints)
+        self.current_waypoints = []  # Store received waypoints
+        self.current_index = 0       # Track which waypoint we are moving to
+        self.robot_position = (0.0, 0.0)
+    
 
-    def path_callback(self, msg):
-        """Callback to receive waypoints as a Path message."""
-        self.waypoints = [(pose.pose.position.x, pose.pose.position.y) for pose in msg.poses]
-        self.get_logger().info(f"Received {len(self.waypoints)} waypoints.")
+        self.timer = self.create_timer(0.1, self.navigate_to_waypoint)
+    
+    def update_turtlebot_position(self, x, y):
+        """Update the TurtleBot's position using the detected blue object."""
+        self.robot_position = (x, y)
+        self.get_logger().info(f"🔵 Updated TurtleBot Position: X={x:.2f}, Y={y:.2f}")
 
-    def follow_waypoints(self):
-        """Process waypoints one by one."""
-        if not self.waypoints:
-            return
 
-        goal_x, goal_y = self.waypoints[0]  # Get next waypoint
+    def waypoints_callback(self, msg):
+        """Receive waypoints and store them."""
+        self.current_waypoints = [(pose.pose.position.x, pose.pose.position.y) for pose in msg.poses]
+        self.current_index = 0  # Start from the first waypoint
+        self.get_logger().info(f"✅ Received {len(self.current_waypoints)} waypoints.")
 
-        dx = goal_x - self.current_x
-        dy = goal_y - self.current_y
-        distance = math.sqrt(dx**2 + dy**2)
-        target_theta = math.atan2(dy, dx)
-        angle_diff = target_theta - self.current_theta
-        angle_diff = math.atan2(math.sin(angle_diff), math.cos(angle_diff))  # Normalize to [-pi, pi]
-
-        # Rotate the robot to face the waypoint
-        if abs(angle_diff) > 0.1:
-            self.publish_wheel_commands(0.0, angle_diff * self.angular_speed)
-            return
-
-        # Move the robot forward
-        if distance > 0.1:
-            self.publish_wheel_commands(self.linear_speed, 0.0)
+    def position_callback(self, msg):
+        """Update the TurtleBot's position from the YOLO node."""
+        if len(msg.data) >= 2:
+            self.robot_position = (msg.data[0], msg.data[1])
+            self.get_logger().info(f"🔵 Updated TurtleBot Position from YOLO: X={self.robot_position[0]:.2f}, Y={self.robot_position[1]:.2f}")
         else:
-            self.get_logger().info(f"Reached waypoint ({goal_x}, {goal_y})")
-            self.publish_wheel_commands(0.0, 0.0)
-            self.current_x = goal_x
-            self.current_y = goal_y
-            self.current_theta = target_theta
-            self.waypoints.pop(0)  # Remove reached waypoint
+         self.get_logger().warn("⚠️ Received invalid TurtleBot position message!")
 
-    def publish_wheel_commands(self, linear_vel, angular_vel):
-        """Calculate wheel velocities and publish WheelCommands."""
-        left_wheel_velocity = (linear_vel - angular_vel * self.wheel_base / 2) / self.wheel_radius
-        right_wheel_velocity = (linear_vel + angular_vel * self.wheel_base / 2) / self.wheel_radius
 
-        wheel_cmd = WheelCommands()
-        wheel_cmd.left_velocity = int(left_wheel_velocity)
-        wheel_cmd.right_velocity = int(right_wheel_velocity)
-        self.wheel_cmd_publisher.publish(wheel_cmd)
+    # def navigate_to_waypoint(self):
+    #     """Move the TurtleBot to each waypoint in sequence."""
+    #     if not self.current_waypoints or self.current_index >= len(self.current_waypoints):
+    #         self.stop_robot()
+    #         return
+        
+    #     # Prevent error if robot_position is None --> if delay in detection 
+    #     if self.robot_position is None:
+    #         self.get_logger().warn("⚠️ Robot position not updated yet! Waiting for update...")
+    #         return
+
+    #     goal_x, goal_y = self.current_waypoints[self.current_index]
+    #     robot_x, robot_y = self.robot_position  
+
+    #     distance = math.sqrt((goal_x - robot_x)**2 + (goal_y - robot_y)**2)
+    #     angle_to_target = math.atan2(goal_y - robot_y, goal_x - robot_x)
+
+    #     if distance < 0.1:  # Close enough to waypoint
+    #         self.get_logger().info(f"✅ Reached waypoint {self.current_index + 1}/{len(self.current_waypoints)}")
+    #         self.current_index += 1
+    #         return
+
+    #     # Create movement command
+    #     twist = Twist()
+    #     twist.linear.x = min(0.2, distance)  # Move forward
+    #     twist.angular.z = min(0.5, angle_to_target)  # Turn towards waypoint
+
+    #     self.cmd_vel_pub.publish(twist)
+
+    def navigate_to_waypoint(self):
+        """Move the TurtleBot to each waypoint in sequence."""
+        if not self.current_waypoints or self.current_index >= len(self.current_waypoints):
+            self.stop_robot()
+            return
+        
+        # Make sure we have a valid position update
+        if self.robot_position is None:
+            self.get_logger().warn("⚠️ Robot position not updated yet! Waiting for update...")
+            return
+
+        # Get current waypoint
+        goal_x, goal_y = self.current_waypoints[self.current_index]
+        robot_x, robot_y = self.robot_position  # Use real-time position from YOLO
+
+        # Compute distance and angle to target
+        distance = math.sqrt((goal_x - robot_x)**2 + (goal_y - robot_y)**2)
+        angle_to_target = math.atan2(goal_y - robot_y, goal_x - robot_x)
+
+        # Print debug info
+        self.get_logger().info(f"🎯 Target: X={goal_x:.2f}, Y={goal_y:.2f}")
+        self.get_logger().info(f"🤖 TurtleBot Position: X={robot_x:.2f}, Y={robot_y:.2f}")
+        self.get_logger().info(f"📏 Distance to Waypoint: {distance:.3f} meters")
+
+        # If close enough to waypoint, move to the next one
+        if distance < 0.1:
+            self.get_logger().info(f"✅ Reached waypoint {self.current_index + 1}/{len(self.current_waypoints)}")
+            self.current_index += 1
+            return
+
+        # Create movement command
+        twist = Twist()
+
+        # First, rotate toward the waypoint
+        angle_diff = angle_to_target  # Simplified for now; could be improved with real orientation
+        if abs(angle_diff) > 0.1:  
+            twist.angular.z = 0.5 if angle_diff > 0 else -0.5  # Turn toward target
+        else:
+            twist.linear.x = min(0.2, distance)  # Move forward only when aligned
+
+        # Debug message before publishing command
+        self.get_logger().info(f"🚀 Sending /cmd_vel: Linear={twist.linear.x:.2f}, Angular={twist.angular.z:.2f}")
+
+        # Publish movement command
+        self.cmd_vel_pub.publish(twist)
+
+
+    def stop_robot(self):
+        """Stop the robot when waypoints are complete."""
+        twist = Twist()
+        self.cmd_vel_pub.publish(twist)
+        self.get_logger().info("🏁 All waypoints reached! Stopping.")
 
 def main():
     rclpy.init()
-    node = WaypointFollower()
+    node = TurtleBotWaypointFollower()
     rclpy.spin(node)
+    node.destroy_node()
     rclpy.shutdown()
-
-if __name__ == '__main__':
-    main()

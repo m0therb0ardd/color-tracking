@@ -9,7 +9,7 @@ from std_msgs.msg import Float32MultiArray
 from visualization_msgs.msg import MarkerArray
 from tf2_ros import TransformBroadcaster, Buffer, TransformListener
 from geometry_msgs.msg import TransformStamped
-
+from me495_yolo.waypoint_follower import TurtleBotWaypointFollower
 
 class YoloNode(Node):
     def __init__(self):
@@ -27,6 +27,8 @@ class YoloNode(Node):
         # self.tf_timer = self.create_timer(1.0/self.freq, self.broadcast_static_tf)  # Publish every 100ms
         self.tf_buffer = Buffer()
         self.tf_listener = TransformListener(self.tf_buffer, self)
+        self.waypoint_follower = TurtleBotWaypointFollower()
+        
 
 
         # Timer variables
@@ -42,6 +44,8 @@ class YoloNode(Node):
         # Publishers
         self.pub = self.create_publisher(Image, 'new_image', 10)
         self.path_publisher = self.create_publisher(Float32MultiArray, 'path_points', 10)
+        self.turtlebot_position_pub = self.create_publisher(Float32MultiArray, '/turtlebot_position', 10)
+
 
         # Color Tracking Settings (Pink marker)
         # Color Tracking Settings
@@ -173,8 +177,22 @@ class YoloNode(Node):
 
                 if blue_world_coords:
                     Xb, Yb, Zb = blue_world_coords
+
+                    # Publish TurtleBot's position
+                    turtlebot_msg = Float32MultiArray()
+                    turtlebot_msg.data = [Xb, Yb]  # Only X, Y since TurtleBot moves on a plane
+                    self.turtlebot_position_pub.publish(turtlebot_msg)
+
+                    # update turtlebot position 
+                    self.waypoint_follower.update_turtlebot_position(Xb, Yb)
+                    
+                     # Log the published position
+                    self.get_logger().info(f"📡 Published TurtleBot Position: X={Xb:.3f}, Y={Yb:.3f}")
+
+
                     self.broadcast_camera_to_turtlebot(Xb, Yb, Zb)
                     self.get_logger().info(f"🔵 TurtleBot Position: X={Xb:.3f}, Y={Yb:.3f}, Z={Zb:.3f}")
+                    self.get_logger().info(f"🔵 TurtleBot Detected at: X={Xb:.3f}, Y={Yb:.3f}, Z={Zb:.3f}")
 
                     # **Draw blue centroid on image**
                     cv2.circle(cv_image, (blue_cX, blue_cY), 5, (255, 255, 0), -1)
@@ -192,7 +210,7 @@ class YoloNode(Node):
         merged_contour = None
 
         for contour in contours:
-            if cv2.contourArea(contour) > 500:  # Filter small areas
+            if cv2.contourArea(contour) > 100:  # Filter small areas
                 if merged_contour is None:
                     merged_contour = contour
                 else:
@@ -295,7 +313,7 @@ class YoloNode(Node):
             t.header.stamp = self.get_clock().now().to_msg()
             t.header.frame_id = 'camera_color_optical_frame'  # Camera's frame
             t.child_frame_id = 'turtlebot_blue_object'  # New frame for TurtleBot marker
-            
+
 
             t.transform.translation.x = float(X)
             t.transform.translation.y = float(Y)

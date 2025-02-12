@@ -1,0 +1,4 @@
+[console_scripts]
+waypoint = me495_yolo.waypoint:main
+waypoint_follower = me495_yolo.waypoint_follower:main
+yolo = me495_yolo.yolo:main

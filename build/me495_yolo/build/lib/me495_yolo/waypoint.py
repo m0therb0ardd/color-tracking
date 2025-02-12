@@ -417,9 +417,9 @@ class WaypointNode(Node):
         
 
         self.start_time = None  
-        self.time_limit = 5  # Limit waypoint processing to 5 seconds
+        self.time_limit = 10  # Limit waypoint processing to 5 seconds
 
-        self.get_logger().info("✅ WaypointNode initialized with a 5-second processing limit.")
+        self.get_logger().info("✅ WaypointNode initialized with a 10-second processing limit.")
 
 
     def image_callback(self, msg):

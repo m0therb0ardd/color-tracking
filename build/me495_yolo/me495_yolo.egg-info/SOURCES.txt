@@ -11,6 +11,7 @@ me495_yolo/__init__.py
 me495_yolo/local_waypoint_follower.py
 me495_yolo/waypoint.py
 me495_yolo/waypoint_follower.py
+me495_yolo/waypoint_follower_old.py
 me495_yolo/yolo.py
 resource/me495_yolo
 test/test_copyright.py
