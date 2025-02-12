@@ -50,7 +50,11 @@ class YoloNode(Node):
         # Color Tracking Settings (Pink marker)
         # Color Tracking Settings
         self.pink_range = ((145, 50, 50), (165, 255, 255))  # HSV range for pink (dancer)
-        self.blue_range = ((35, 50, 50), (85, 255, 255)) #green but not changign nathign 
+        #self.pink_range = ((140, 30, 30), (170, 255, 255)) #wider range of pink values
+
+       # self.blue_range = ((35, 50, 50), (85, 255, 255)) #green but not changign naming
+        self.blue_range = ((30, 40, 40), (90, 255, 255)) # wider range for more green/blue vlaues --> remember im nto changign name so this is called blue but its green 
+
         #self.blue_range = ((90, 50, 50), (130, 255, 255))   # HSV range for blue (TurtleBot marker)
 
         # self.color_name = "pink"
@@ -210,7 +214,7 @@ class YoloNode(Node):
         merged_contour = None
 
         for contour in contours:
-            if cv2.contourArea(contour) > 100:  # Filter small areas
+            if cv2.contourArea(contour) > 300:  # Filter small areas
                 if merged_contour is None:
                     merged_contour = contour
                 else:

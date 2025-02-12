@@ -1,0 +1,170 @@
+[0.019s] Invoking command in '/home/catherine-maglione/yolo_home/build/nuturtlebot_msgs': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/catherine-maglione/yolo_home/install/me495_yolo:/opt/ros/jazzy /usr/bin/cmake --build /home/catherine-maglione/yolo_home/build/nuturtlebot_msgs -- -j32 -l32
+[0.096s] [  2%] Built target nuturtlebot_msgs__rosidl_generator_type_description
+[0.118s] [  2%] Built target ament_cmake_python_copy_nuturtlebot_msgs
+[0.145s] [  6%] Built target nuturtlebot_msgs__cpp
+[0.146s] [ 22%] Built target nuturtlebot_msgs__rosidl_generator_c
+[0.202s] [ 31%] Built target nuturtlebot_msgs__rosidl_typesupport_c
+[0.217s] [ 40%] Built target nuturtlebot_msgs__rosidl_typesupport_introspection_cpp
+[0.218s] [ 50%] Built target nuturtlebot_msgs__rosidl_typesupport_fastrtps_c
+[0.219s] [ 65%] Built target nuturtlebot_msgs__rosidl_typesupport_cpp
+[0.219s] [ 68%] Built target nuturtlebot_msgs__rosidl_typesupport_fastrtps_cpp
+[0.220s] [ 77%] Built target nuturtlebot_msgs__rosidl_typesupport_introspection_c
+[0.259s] [ 77%] Built target nuturtlebot_msgs
+[0.301s] [ 79%] Built target nuturtlebot_msgs__py
+[0.344s] [ 86%] Built target nuturtlebot_msgs__rosidl_generator_py
+[0.387s] [ 90%] Built target nuturtlebot_msgs_s__rosidl_typesupport_c
+[0.388s] [ 95%] Built target nuturtlebot_msgs_s__rosidl_typesupport_introspection_c
+[0.389s] [100%] Built target nuturtlebot_msgs_s__rosidl_typesupport_fastrtps_c
+[0.501s] running egg_info
+[0.530s] writing nuturtlebot_msgs.egg-info/PKG-INFO
+[0.530s] writing dependency_links to nuturtlebot_msgs.egg-info/dependency_links.txt
+[0.530s] writing top-level names to nuturtlebot_msgs.egg-info/top_level.txt
+[0.607s] reading manifest file 'nuturtlebot_msgs.egg-info/SOURCES.txt'
+[0.609s] writing manifest file 'nuturtlebot_msgs.egg-info/SOURCES.txt'
+[0.648s] [100%] Built target ament_cmake_python_build_nuturtlebot_msgs_egg
+[0.668s] Invoked command in '/home/catherine-maglione/yolo_home/build/nuturtlebot_msgs' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/catherine-maglione/yolo_home/install/me495_yolo:/opt/ros/jazzy /usr/bin/cmake --build /home/catherine-maglione/yolo_home/build/nuturtlebot_msgs -- -j32 -l32
+[0.886s] Invoking command in '/home/catherine-maglione/yolo_home/build/nuturtlebot_msgs': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/catherine-maglione/yolo_home/install/me495_yolo:/opt/ros/jazzy /usr/bin/cmake --install /home/catherine-maglione/yolo_home/build/nuturtlebot_msgs
+[0.898s] -- Install configuration: ""
+[0.898s] -- Up-to-date: /home/catherine-maglione/yolo_home/install/nuturtlebot_msgs/share/ament_index/resource_index/rosidl_interfaces/nuturtlebot_msgs
+[0.898s] -- Up-to-date: /home/catherine-maglione/yolo_home/install/nuturtlebot_msgs/share/nuturtlebot_msgs/msg/SensorData.json
+[0.898s] -- Up-to-date: /home/catherine-maglione/yolo_home/install/nuturtlebot_msgs/share/nuturtlebot_msgs/msg/WheelCommands.json
+[0.898s] -- Up-to-date: /home/catherine-maglione/yolo_home/install/nuturtlebot_msgs/include/nuturtlebot_msgs/nuturtlebot_msgs
+[0.898s] -- Up-to-date: /home/catherine-maglione/yolo_home/install/nuturtlebot_msgs/include/nuturtlebot_msgs/nuturtlebot_msgs/msg
+[0.899s] -- Up-to-date: /home/catherine-maglione/yolo_home/install/nuturtlebot_msgs/include/nuturtlebot_msgs/nuturtlebot_msgs/msg/rosidl_generator_c__visibility_control.h
+[0.899s] -- Up-to-date: /home/catherine-maglione/yolo_home/install/nuturtlebot_msgs/include/nuturtlebot_msgs/nuturtlebot_msgs/msg/detail
+[0.899s] -- Up-to-date: /home/catherine-maglione/yolo_home/install/nuturtlebot_msgs/include/nuturtlebot_msgs/nuturtlebot_msgs/msg/detail/sensor_data__type_support.c
+[0.899s] -- Up-to-date: /home/catherine-maglione/yolo_home/install/nuturtlebot_msgs/include/nuturtlebot_msgs/nuturtlebot_msgs/msg/detail/sensor_data__struct.h
+[0.899s] -- Up-to-date: /home/catherine-maglione/yolo_home/install/nuturtlebot_msgs/include/nuturtlebot_msgs/nuturtlebot_msgs/msg/detail/sensor_data__description.c
+[0.899s] -- Up-to-date: /home/catherine-maglione/yolo_home/install/nuturtlebot_msgs/include/nuturtlebot_msgs/nuturtlebot_msgs/msg/detail/wheel_commands__type_support.c
+[0.899s] -- Up-to-date: /home/catherine-maglione/yolo_home/install/nuturtlebot_msgs/include/nuturtlebot_msgs/nuturtlebot_msgs/msg/detail/sensor_data__functions.c
+[0.899s] -- Up-to-date: /home/catherine-maglione/yolo_home/install/nuturtlebot_msgs/include/nuturtlebot_msgs/nuturtlebot_msgs/msg/detail/wheel_commands__functions.h
+[0.899s] -- Up-to-date: /home/catherine-maglione/yolo_home/install/nuturtlebot_msgs/include/nuturtlebot_msgs/nuturtlebot_msgs/msg/detail/sensor_data__functions.h
+[0.899s] -- Up-to-date: /home/catherine-maglione/yolo_home/install/nuturtlebot_msgs/include/nuturtlebot_msgs/nuturtlebot_msgs/msg/detail/wheel_commands__description.c
+[0.900s] -- Up-to-date: /home/catherine-maglione/yolo_home/install/nuturtlebot_msgs/include/nuturtlebot_msgs/nuturtlebot_msgs/msg/detail/wheel_commands__struct.h
+[0.900s] -- Up-to-date: /home/catherine-maglione/yolo_home/install/nuturtlebot_msgs/include/nuturtlebot_msgs/nuturtlebot_msgs/msg/detail/sensor_data__type_support.h
+[0.900s] -- Up-to-date: /home/catherine-maglione/yolo_home/install/nuturtlebot_msgs/include/nuturtlebot_msgs/nuturtlebot_msgs/msg/detail/wheel_commands__type_support.h
+[0.900s] -- Up-to-date: /home/catherine-maglione/yolo_home/install/nuturtlebot_msgs/include/nuturtlebot_msgs/nuturtlebot_msgs/msg/detail/wheel_commands__functions.c
+[0.900s] -- Up-to-date: /home/catherine-maglione/yolo_home/install/nuturtlebot_msgs/include/nuturtlebot_msgs/nuturtlebot_msgs/msg/sensor_data.h
+[0.900s] -- Up-to-date: /home/catherine-maglione/yolo_home/install/nuturtlebot_msgs/include/nuturtlebot_msgs/nuturtlebot_msgs/msg/wheel_commands.h
+[0.900s] -- Up-to-date: /home/catherine-maglione/yolo_home/install/nuturtlebot_msgs/share/nuturtlebot_msgs/environment/library_path.sh
+[0.901s] -- Up-to-date: /home/catherine-maglione/yolo_home/install/nuturtlebot_msgs/share/nuturtlebot_msgs/environment/library_path.dsv
+[0.901s] -- Up-to-date: /home/catherine-maglione/yolo_home/install/nuturtlebot_msgs/lib/libnuturtlebot_msgs__rosidl_generator_c.so
+[0.901s] -- Up-to-date: /home/catherine-maglione/yolo_home/install/nuturtlebot_msgs/include/nuturtlebot_msgs/nuturtlebot_msgs
+[0.901s] -- Up-to-date: /home/catherine-maglione/yolo_home/install/nuturtlebot_msgs/include/nuturtlebot_msgs/nuturtlebot_msgs/msg
+[0.901s] -- Up-to-date: /home/catherine-maglione/yolo_home/install/nuturtlebot_msgs/include/nuturtlebot_msgs/nuturtlebot_msgs/msg/detail
+[0.902s] -- Up-to-date: /home/catherine-maglione/yolo_home/install/nuturtlebot_msgs/include/nuturtlebot_msgs/nuturtlebot_msgs/msg/detail/wheel_commands__rosidl_typesupport_fastrtps_c.h
+[0.902s] -- Up-to-date: /home/catherine-maglione/yolo_home/install/nuturtlebot_msgs/include/nuturtlebot_msgs/nuturtlebot_msgs/msg/detail/sensor_data__rosidl_typesupport_fastrtps_c.h
+[0.902s] -- Up-to-date: /home/catherine-maglione/yolo_home/install/nuturtlebot_msgs/include/nuturtlebot_msgs/nuturtlebot_msgs/msg/rosidl_typesupport_fastrtps_c__visibility_control.h
+[0.902s] -- Up-to-date: /home/catherine-maglione/yolo_home/install/nuturtlebot_msgs/lib/libnuturtlebot_msgs__rosidl_typesupport_fastrtps_c.so
+[0.902s] -- Up-to-date: /home/catherine-maglione/yolo_home/install/nuturtlebot_msgs/include/nuturtlebot_msgs/nuturtlebot_msgs
+[0.902s] -- Up-to-date: /home/catherine-maglione/yolo_home/install/nuturtlebot_msgs/include/nuturtlebot_msgs/nuturtlebot_msgs/msg
+[0.903s] -- Up-to-date: /home/catherine-maglione/yolo_home/install/nuturtlebot_msgs/include/nuturtlebot_msgs/nuturtlebot_msgs/msg/detail
+[0.903s] -- Up-to-date: /home/catherine-maglione/yolo_home/install/nuturtlebot_msgs/include/nuturtlebot_msgs/nuturtlebot_msgs/msg/detail/wheel_commands__type_support.hpp
+[0.903s] -- Up-to-date: /home/catherine-maglione/yolo_home/install/nuturtlebot_msgs/include/nuturtlebot_msgs/nuturtlebot_msgs/msg/detail/wheel_commands__builder.hpp
+[0.903s] -- Up-to-date: /home/catherine-maglione/yolo_home/install/nuturtlebot_msgs/include/nuturtlebot_msgs/nuturtlebot_msgs/msg/detail/sensor_data__traits.hpp
+[0.903s] -- Up-to-date: /home/catherine-maglione/yolo_home/install/nuturtlebot_msgs/include/nuturtlebot_msgs/nuturtlebot_msgs/msg/detail/sensor_data__type_support.hpp
+[0.903s] -- Up-to-date: /home/catherine-maglione/yolo_home/install/nuturtlebot_msgs/include/nuturtlebot_msgs/nuturtlebot_msgs/msg/detail/wheel_commands__struct.hpp
+[0.904s] -- Up-to-date: /home/catherine-maglione/yolo_home/install/nuturtlebot_msgs/include/nuturtlebot_msgs/nuturtlebot_msgs/msg/detail/wheel_commands__traits.hpp
+[0.904s] -- Up-to-date: /home/catherine-maglione/yolo_home/install/nuturtlebot_msgs/include/nuturtlebot_msgs/nuturtlebot_msgs/msg/detail/sensor_data__struct.hpp
+[0.904s] -- Up-to-date: /home/catherine-maglione/yolo_home/install/nuturtlebot_msgs/include/nuturtlebot_msgs/nuturtlebot_msgs/msg/detail/sensor_data__builder.hpp
+[0.904s] -- Up-to-date: /home/catherine-maglione/yolo_home/install/nuturtlebot_msgs/include/nuturtlebot_msgs/nuturtlebot_msgs/msg/rosidl_generator_cpp__visibility_control.hpp
+[0.904s] -- Up-to-date: /home/catherine-maglione/yolo_home/install/nuturtlebot_msgs/include/nuturtlebot_msgs/nuturtlebot_msgs/msg/wheel_commands.hpp
+[0.904s] -- Up-to-date: /home/catherine-maglione/yolo_home/install/nuturtlebot_msgs/include/nuturtlebot_msgs/nuturtlebot_msgs/msg/sensor_data.hpp
+[0.904s] -- Up-to-date: /home/catherine-maglione/yolo_home/install/nuturtlebot_msgs/include/nuturtlebot_msgs/nuturtlebot_msgs
+[0.905s] -- Up-to-date: /home/catherine-maglione/yolo_home/install/nuturtlebot_msgs/include/nuturtlebot_msgs/nuturtlebot_msgs/msg
+[0.905s] -- Up-to-date: /home/catherine-maglione/yolo_home/install/nuturtlebot_msgs/include/nuturtlebot_msgs/nuturtlebot_msgs/msg/detail
+[0.905s] -- Up-to-date: /home/catherine-maglione/yolo_home/install/nuturtlebot_msgs/include/nuturtlebot_msgs/nuturtlebot_msgs/msg/detail/dds_fastrtps
+[0.905s] -- Up-to-date: /home/catherine-maglione/yolo_home/install/nuturtlebot_msgs/include/nuturtlebot_msgs/nuturtlebot_msgs/msg/detail/wheel_commands__rosidl_typesupport_fastrtps_cpp.hpp
+[0.905s] -- Up-to-date: /home/catherine-maglione/yolo_home/install/nuturtlebot_msgs/include/nuturtlebot_msgs/nuturtlebot_msgs/msg/detail/sensor_data__rosidl_typesupport_fastrtps_cpp.hpp
+[0.905s] -- Up-to-date: /home/catherine-maglione/yolo_home/install/nuturtlebot_msgs/include/nuturtlebot_msgs/nuturtlebot_msgs/msg/rosidl_typesupport_fastrtps_cpp__visibility_control.h
+[0.905s] -- Up-to-date: /home/catherine-maglione/yolo_home/install/nuturtlebot_msgs/lib/libnuturtlebot_msgs__rosidl_typesupport_fastrtps_cpp.so
+[0.906s] -- Up-to-date: /home/catherine-maglione/yolo_home/install/nuturtlebot_msgs/include/nuturtlebot_msgs/nuturtlebot_msgs
+[0.906s] -- Up-to-date: /home/catherine-maglione/yolo_home/install/nuturtlebot_msgs/include/nuturtlebot_msgs/nuturtlebot_msgs/msg
+[0.906s] -- Up-to-date: /home/catherine-maglione/yolo_home/install/nuturtlebot_msgs/include/nuturtlebot_msgs/nuturtlebot_msgs/msg/detail
+[0.906s] -- Up-to-date: /home/catherine-maglione/yolo_home/install/nuturtlebot_msgs/include/nuturtlebot_msgs/nuturtlebot_msgs/msg/detail/sensor_data__type_support.c
+[0.906s] -- Up-to-date: /home/catherine-maglione/yolo_home/install/nuturtlebot_msgs/include/nuturtlebot_msgs/nuturtlebot_msgs/msg/detail/wheel_commands__type_support.c
+[0.906s] -- Up-to-date: /home/catherine-maglione/yolo_home/install/nuturtlebot_msgs/include/nuturtlebot_msgs/nuturtlebot_msgs/msg/detail/sensor_data__rosidl_typesupport_introspection_c.h
+[0.906s] -- Up-to-date: /home/catherine-maglione/yolo_home/install/nuturtlebot_msgs/include/nuturtlebot_msgs/nuturtlebot_msgs/msg/detail/wheel_commands__rosidl_typesupport_introspection_c.h
+[0.906s] -- Up-to-date: /home/catherine-maglione/yolo_home/install/nuturtlebot_msgs/include/nuturtlebot_msgs/nuturtlebot_msgs/msg/rosidl_typesupport_introspection_c__visibility_control.h
+[0.906s] -- Up-to-date: /home/catherine-maglione/yolo_home/install/nuturtlebot_msgs/lib/libnuturtlebot_msgs__rosidl_typesupport_introspection_c.so
+[0.907s] -- Up-to-date: /home/catherine-maglione/yolo_home/install/nuturtlebot_msgs/lib/libnuturtlebot_msgs__rosidl_typesupport_c.so
+[0.907s] -- Up-to-date: /home/catherine-maglione/yolo_home/install/nuturtlebot_msgs/include/nuturtlebot_msgs/nuturtlebot_msgs
+[0.908s] -- Up-to-date: /home/catherine-maglione/yolo_home/install/nuturtlebot_msgs/include/nuturtlebot_msgs/nuturtlebot_msgs/msg
+[0.908s] -- Up-to-date: /home/catherine-maglione/yolo_home/install/nuturtlebot_msgs/include/nuturtlebot_msgs/nuturtlebot_msgs/msg/detail
+[0.908s] -- Up-to-date: /home/catherine-maglione/yolo_home/install/nuturtlebot_msgs/include/nuturtlebot_msgs/nuturtlebot_msgs/msg/detail/wheel_commands__type_support.cpp
+[0.908s] -- Up-to-date: /home/catherine-maglione/yolo_home/install/nuturtlebot_msgs/include/nuturtlebot_msgs/nuturtlebot_msgs/msg/detail/sensor_data__rosidl_typesupport_introspection_cpp.hpp
+[0.908s] -- Up-to-date: /home/catherine-maglione/yolo_home/install/nuturtlebot_msgs/include/nuturtlebot_msgs/nuturtlebot_msgs/msg/detail/wheel_commands__rosidl_typesupport_introspection_cpp.hpp
+[0.908s] -- Up-to-date: /home/catherine-maglione/yolo_home/install/nuturtlebot_msgs/include/nuturtlebot_msgs/nuturtlebot_msgs/msg/detail/sensor_data__type_support.cpp
+[0.908s] -- Up-to-date: /home/catherine-maglione/yolo_home/install/nuturtlebot_msgs/lib/libnuturtlebot_msgs__rosidl_typesupport_introspection_cpp.so
+[0.908s] -- Up-to-date: /home/catherine-maglione/yolo_home/install/nuturtlebot_msgs/lib/libnuturtlebot_msgs__rosidl_typesupport_cpp.so
+[0.909s] -- Up-to-date: /home/catherine-maglione/yolo_home/install/nuturtlebot_msgs/share/nuturtlebot_msgs/environment/pythonpath.sh
+[0.909s] -- Up-to-date: /home/catherine-maglione/yolo_home/install/nuturtlebot_msgs/share/nuturtlebot_msgs/environment/pythonpath.dsv
+[0.909s] -- Up-to-date: /home/catherine-maglione/yolo_home/install/nuturtlebot_msgs/lib/python3.12/site-packages/nuturtlebot_msgs-0.0.2-py3.12.egg-info
+[0.909s] -- Installing: /home/catherine-maglione/yolo_home/install/nuturtlebot_msgs/lib/python3.12/site-packages/nuturtlebot_msgs-0.0.2-py3.12.egg-info/SOURCES.txt
+[0.909s] -- Installing: /home/catherine-maglione/yolo_home/install/nuturtlebot_msgs/lib/python3.12/site-packages/nuturtlebot_msgs-0.0.2-py3.12.egg-info/dependency_links.txt
+[0.909s] -- Installing: /home/catherine-maglione/yolo_home/install/nuturtlebot_msgs/lib/python3.12/site-packages/nuturtlebot_msgs-0.0.2-py3.12.egg-info/PKG-INFO
+[0.909s] -- Installing: /home/catherine-maglione/yolo_home/install/nuturtlebot_msgs/lib/python3.12/site-packages/nuturtlebot_msgs-0.0.2-py3.12.egg-info/top_level.txt
+[0.909s] -- Up-to-date: /home/catherine-maglione/yolo_home/install/nuturtlebot_msgs/lib/python3.12/site-packages/nuturtlebot_msgs
+[0.909s] -- Up-to-date: /home/catherine-maglione/yolo_home/install/nuturtlebot_msgs/lib/python3.12/site-packages/nuturtlebot_msgs/_nuturtlebot_msgs_s.ep.rosidl_typesupport_c.c
+[0.909s] -- Up-to-date: /home/catherine-maglione/yolo_home/install/nuturtlebot_msgs/lib/python3.12/site-packages/nuturtlebot_msgs/msg
+[0.909s] -- Up-to-date: /home/catherine-maglione/yolo_home/install/nuturtlebot_msgs/lib/python3.12/site-packages/nuturtlebot_msgs/msg/_sensor_data.py
+[0.910s] -- Up-to-date: /home/catherine-maglione/yolo_home/install/nuturtlebot_msgs/lib/python3.12/site-packages/nuturtlebot_msgs/msg/_wheel_commands_s.c
+[0.910s] -- Up-to-date: /home/catherine-maglione/yolo_home/install/nuturtlebot_msgs/lib/python3.12/site-packages/nuturtlebot_msgs/msg/_wheel_commands.py
+[0.910s] -- Up-to-date: /home/catherine-maglione/yolo_home/install/nuturtlebot_msgs/lib/python3.12/site-packages/nuturtlebot_msgs/msg/_sensor_data_s.c
+[0.910s] -- Up-to-date: /home/catherine-maglione/yolo_home/install/nuturtlebot_msgs/lib/python3.12/site-packages/nuturtlebot_msgs/msg/__init__.py
+[0.910s] -- Up-to-date: /home/catherine-maglione/yolo_home/install/nuturtlebot_msgs/lib/python3.12/site-packages/nuturtlebot_msgs/nuturtlebot_msgs_s__rosidl_typesupport_c.so
+[0.910s] -- Up-to-date: /home/catherine-maglione/yolo_home/install/nuturtlebot_msgs/lib/python3.12/site-packages/nuturtlebot_msgs/nuturtlebot_msgs_s__rosidl_typesupport_introspection_c.so
+[0.910s] -- Up-to-date: /home/catherine-maglione/yolo_home/install/nuturtlebot_msgs/lib/python3.12/site-packages/nuturtlebot_msgs/nuturtlebot_msgs_s__rosidl_typesupport_fastrtps_c.so
+[0.910s] -- Up-to-date: /home/catherine-maglione/yolo_home/install/nuturtlebot_msgs/lib/python3.12/site-packages/nuturtlebot_msgs/_nuturtlebot_msgs_s.ep.rosidl_typesupport_introspection_c.c
+[0.910s] -- Up-to-date: /home/catherine-maglione/yolo_home/install/nuturtlebot_msgs/lib/python3.12/site-packages/nuturtlebot_msgs/__init__.py
+[0.910s] -- Up-to-date: /home/catherine-maglione/yolo_home/install/nuturtlebot_msgs/lib/python3.12/site-packages/nuturtlebot_msgs/_nuturtlebot_msgs_s.ep.rosidl_typesupport_fastrtps_c.c
+[0.953s] Listing '/home/catherine-maglione/yolo_home/install/nuturtlebot_msgs/lib/python3.12/site-packages/nuturtlebot_msgs'...
+[0.953s] Listing '/home/catherine-maglione/yolo_home/install/nuturtlebot_msgs/lib/python3.12/site-packages/nuturtlebot_msgs/msg'...
+[0.958s] -- Up-to-date: /home/catherine-maglione/yolo_home/install/nuturtlebot_msgs/lib/python3.12/site-packages/nuturtlebot_msgs/nuturtlebot_msgs_s__rosidl_typesupport_fastrtps_c.so
+[0.958s] -- Up-to-date: /home/catherine-maglione/yolo_home/install/nuturtlebot_msgs/lib/python3.12/site-packages/nuturtlebot_msgs/nuturtlebot_msgs_s__rosidl_typesupport_introspection_c.so
+[0.958s] -- Up-to-date: /home/catherine-maglione/yolo_home/install/nuturtlebot_msgs/lib/python3.12/site-packages/nuturtlebot_msgs/nuturtlebot_msgs_s__rosidl_typesupport_c.so
+[0.959s] -- Up-to-date: /home/catherine-maglione/yolo_home/install/nuturtlebot_msgs/lib/libnuturtlebot_msgs__rosidl_generator_py.so
+[0.959s] -- Up-to-date: /home/catherine-maglione/yolo_home/install/nuturtlebot_msgs/share/nuturtlebot_msgs/msg/SensorData.idl
+[0.959s] -- Up-to-date: /home/catherine-maglione/yolo_home/install/nuturtlebot_msgs/share/nuturtlebot_msgs/msg/WheelCommands.idl
+[0.959s] -- Up-to-date: /home/catherine-maglione/yolo_home/install/nuturtlebot_msgs/share/nuturtlebot_msgs/msg/SensorData.msg
+[0.959s] -- Up-to-date: /home/catherine-maglione/yolo_home/install/nuturtlebot_msgs/share/nuturtlebot_msgs/msg/WheelCommands.msg
+[0.960s] -- Up-to-date: /home/catherine-maglione/yolo_home/install/nuturtlebot_msgs/share/ament_index/resource_index/package_run_dependencies/nuturtlebot_msgs
+[0.960s] -- Up-to-date: /home/catherine-maglione/yolo_home/install/nuturtlebot_msgs/share/ament_index/resource_index/parent_prefix_path/nuturtlebot_msgs
+[0.960s] -- Up-to-date: /home/catherine-maglione/yolo_home/install/nuturtlebot_msgs/share/nuturtlebot_msgs/environment/ament_prefix_path.sh
+[0.960s] -- Up-to-date: /home/catherine-maglione/yolo_home/install/nuturtlebot_msgs/share/nuturtlebot_msgs/environment/ament_prefix_path.dsv
+[0.961s] -- Up-to-date: /home/catherine-maglione/yolo_home/install/nuturtlebot_msgs/share/nuturtlebot_msgs/environment/path.sh
+[0.961s] -- Up-to-date: /home/catherine-maglione/yolo_home/install/nuturtlebot_msgs/share/nuturtlebot_msgs/environment/path.dsv
+[0.961s] -- Up-to-date: /home/catherine-maglione/yolo_home/install/nuturtlebot_msgs/share/nuturtlebot_msgs/local_setup.bash
+[0.961s] -- Up-to-date: /home/catherine-maglione/yolo_home/install/nuturtlebot_msgs/share/nuturtlebot_msgs/local_setup.sh
+[0.961s] -- Up-to-date: /home/catherine-maglione/yolo_home/install/nuturtlebot_msgs/share/nuturtlebot_msgs/local_setup.zsh
+[0.961s] -- Up-to-date: /home/catherine-maglione/yolo_home/install/nuturtlebot_msgs/share/nuturtlebot_msgs/local_setup.dsv
+[0.961s] -- Installing: /home/catherine-maglione/yolo_home/install/nuturtlebot_msgs/share/nuturtlebot_msgs/package.dsv
+[0.962s] -- Up-to-date: /home/catherine-maglione/yolo_home/install/nuturtlebot_msgs/share/ament_index/resource_index/packages/nuturtlebot_msgs
+[0.962s] -- Up-to-date: /home/catherine-maglione/yolo_home/install/nuturtlebot_msgs/share/nuturtlebot_msgs/cmake/export_nuturtlebot_msgs__rosidl_generator_cExport.cmake
+[0.962s] -- Up-to-date: /home/catherine-maglione/yolo_home/install/nuturtlebot_msgs/share/nuturtlebot_msgs/cmake/export_nuturtlebot_msgs__rosidl_generator_cExport-noconfig.cmake
+[0.962s] -- Up-to-date: /home/catherine-maglione/yolo_home/install/nuturtlebot_msgs/share/nuturtlebot_msgs/cmake/export_nuturtlebot_msgs__rosidl_typesupport_fastrtps_cExport.cmake
+[0.962s] -- Up-to-date: /home/catherine-maglione/yolo_home/install/nuturtlebot_msgs/share/nuturtlebot_msgs/cmake/export_nuturtlebot_msgs__rosidl_typesupport_fastrtps_cExport-noconfig.cmake
+[0.962s] -- Up-to-date: /home/catherine-maglione/yolo_home/install/nuturtlebot_msgs/share/nuturtlebot_msgs/cmake/export_nuturtlebot_msgs__rosidl_generator_cppExport.cmake
+[0.962s] -- Up-to-date: /home/catherine-maglione/yolo_home/install/nuturtlebot_msgs/share/nuturtlebot_msgs/cmake/export_nuturtlebot_msgs__rosidl_typesupport_fastrtps_cppExport.cmake
+[0.962s] -- Up-to-date: /home/catherine-maglione/yolo_home/install/nuturtlebot_msgs/share/nuturtlebot_msgs/cmake/export_nuturtlebot_msgs__rosidl_typesupport_fastrtps_cppExport-noconfig.cmake
+[0.962s] -- Up-to-date: /home/catherine-maglione/yolo_home/install/nuturtlebot_msgs/share/nuturtlebot_msgs/cmake/nuturtlebot_msgs__rosidl_typesupport_introspection_cExport.cmake
+[0.962s] -- Up-to-date: /home/catherine-maglione/yolo_home/install/nuturtlebot_msgs/share/nuturtlebot_msgs/cmake/nuturtlebot_msgs__rosidl_typesupport_introspection_cExport-noconfig.cmake
+[0.962s] -- Up-to-date: /home/catherine-maglione/yolo_home/install/nuturtlebot_msgs/share/nuturtlebot_msgs/cmake/nuturtlebot_msgs__rosidl_typesupport_cExport.cmake
+[0.962s] -- Up-to-date: /home/catherine-maglione/yolo_home/install/nuturtlebot_msgs/share/nuturtlebot_msgs/cmake/nuturtlebot_msgs__rosidl_typesupport_cExport-noconfig.cmake
+[0.962s] -- Up-to-date: /home/catherine-maglione/yolo_home/install/nuturtlebot_msgs/share/nuturtlebot_msgs/cmake/nuturtlebot_msgs__rosidl_typesupport_introspection_cppExport.cmake
+[0.963s] -- Up-to-date: /home/catherine-maglione/yolo_home/install/nuturtlebot_msgs/share/nuturtlebot_msgs/cmake/nuturtlebot_msgs__rosidl_typesupport_introspection_cppExport-noconfig.cmake
+[0.963s] -- Up-to-date: /home/catherine-maglione/yolo_home/install/nuturtlebot_msgs/share/nuturtlebot_msgs/cmake/nuturtlebot_msgs__rosidl_typesupport_cppExport.cmake
+[0.963s] -- Up-to-date: /home/catherine-maglione/yolo_home/install/nuturtlebot_msgs/share/nuturtlebot_msgs/cmake/nuturtlebot_msgs__rosidl_typesupport_cppExport-noconfig.cmake
+[0.963s] -- Up-to-date: /home/catherine-maglione/yolo_home/install/nuturtlebot_msgs/share/nuturtlebot_msgs/cmake/export_nuturtlebot_msgs__rosidl_generator_pyExport.cmake
+[0.964s] -- Up-to-date: /home/catherine-maglione/yolo_home/install/nuturtlebot_msgs/share/nuturtlebot_msgs/cmake/export_nuturtlebot_msgs__rosidl_generator_pyExport-noconfig.cmake
+[0.964s] -- Up-to-date: /home/catherine-maglione/yolo_home/install/nuturtlebot_msgs/share/nuturtlebot_msgs/cmake/rosidl_cmake-extras.cmake
+[0.965s] -- Up-to-date: /home/catherine-maglione/yolo_home/install/nuturtlebot_msgs/share/nuturtlebot_msgs/cmake/ament_cmake_export_dependencies-extras.cmake
+[0.965s] -- Up-to-date: /home/catherine-maglione/yolo_home/install/nuturtlebot_msgs/share/nuturtlebot_msgs/cmake/ament_cmake_export_include_directories-extras.cmake
+[0.967s] -- Up-to-date: /home/catherine-maglione/yolo_home/install/nuturtlebot_msgs/share/nuturtlebot_msgs/cmake/ament_cmake_export_libraries-extras.cmake
+[0.968s] -- Up-to-date: /home/catherine-maglione/yolo_home/install/nuturtlebot_msgs/share/nuturtlebot_msgs/cmake/ament_cmake_export_targets-extras.cmake
+[0.968s] -- Up-to-date: /home/catherine-maglione/yolo_home/install/nuturtlebot_msgs/share/nuturtlebot_msgs/cmake/rosidl_cmake_export_typesupport_targets-extras.cmake
+[0.969s] -- Up-to-date: /home/catherine-maglione/yolo_home/install/nuturtlebot_msgs/share/nuturtlebot_msgs/cmake/rosidl_cmake_export_typesupport_libraries-extras.cmake
+[0.969s] -- Up-to-date: /home/catherine-maglione/yolo_home/install/nuturtlebot_msgs/share/nuturtlebot_msgs/cmake/nuturtlebot_msgsConfig.cmake
+[0.969s] -- Up-to-date: /home/catherine-maglione/yolo_home/install/nuturtlebot_msgs/share/nuturtlebot_msgs/cmake/nuturtlebot_msgsConfig-version.cmake
+[0.970s] -- Up-to-date: /home/catherine-maglione/yolo_home/install/nuturtlebot_msgs/share/nuturtlebot_msgs/package.xml
+[0.971s] Invoked command in '/home/catherine-maglione/yolo_home/build/nuturtlebot_msgs' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/catherine-maglione/yolo_home/install/me495_yolo:/opt/ros/jazzy /usr/bin/cmake --install /home/catherine-maglione/yolo_home/build/nuturtlebot_msgs

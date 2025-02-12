@@ -20,7 +20,8 @@ from geometry_msgs.msg import Twist, PoseStamped
 from nav_msgs.msg import Path
 import math
 from std_msgs.msg import Float32MultiArray
-
+import tf2_ros
+import tf_transformations
 import time
 
 class TurtleBotWaypointFollower(Node):
@@ -43,6 +44,12 @@ class TurtleBotWaypointFollower(Node):
         self.current_waypoints = []  # Store received waypoints
         self.current_index = 0       # Track which waypoint we are moving to
         self.robot_position = (0.0, 0.0)
+        
+        self.tf_buffer = tf2_ros.Buffer()
+        self.tf_listener = tf2_ros.TransformListener(self.tf_buffer, self)
+        self.yaw = 0.0  # Initialize yaw
+        self.create_timer(0.1, self.update_yaw)  # Update yaw every 100ms
+
     
 
         self.timer = self.create_timer(0.1, self.navigate_to_waypoint)
@@ -51,6 +58,16 @@ class TurtleBotWaypointFollower(Node):
         """Update the TurtleBot's position using the detected blue object."""
         self.robot_position = (x, y)
         self.get_logger().info(f"🔵 Updated TurtleBot Position: X={x:.2f}, Y={y:.2f}")
+
+    def update_yaw(self):
+        try:
+            transform = self.tf_buffer.lookup_transform("map", "turtlebot_base", rclpy.time.Time())
+            quat = transform.transform.rotation
+            _, _, self.yaw = tf_transformations.euler_from_quaternion([quat.x, quat.y, quat.z, quat.w])
+            self.get_logger().info(f"🔄 Updated yaw: {self.yaw:.2f} rad")
+        except Exception as e:
+            self.get_logger().warn(f"⚠️ Could not update yaw: {e}")
+
 
 
     def waypoints_callback(self, msg):
@@ -132,10 +149,21 @@ class TurtleBotWaypointFollower(Node):
 
         # First, rotate toward the waypoint
         angle_diff = angle_to_target  # Simplified for now; could be improved with real orientation
-        if abs(angle_diff) > 0.1:  
-            twist.angular.z = 0.5 if angle_diff > 0 else -0.5  # Turn toward target
+        # if abs(angle_diff) > 0.1:  
+        #     twist.angular.z = 0.5 if angle_diff > 0 else -0.5  # Turn toward target
+        
+        angle_threshold = 0.2  # Small threshold for when to stop turning
+
+        if abs(angle_to_target - self.yaw) > angle_threshold:
+            twist.angular.z = 0.3 * (angle_to_target - self.yaw)  # Scales rotation speed
+            twist.linear.x = 0.0  # Ensure it doesn't move while turning
         else:
-            twist.linear.x = min(0.2, distance)  # Move forward only when aligned
+            twist.angular.z = 0.0  # Stop turning when aligned
+            twist.linear.x = 0.2  # Start moving forward
+
+
+
+    
 
         # Debug message before publishing command
         self.get_logger().info(f"🚀 Sending /cmd_vel: Linear={twist.linear.x:.2f}, Angular={twist.angular.z:.2f}")
